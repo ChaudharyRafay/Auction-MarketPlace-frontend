@@ -1,0 +1,511 @@
+.create-product {
+  .multiArtproduct-banner {
+    position: relative;
+    background-color: #000;
+    padding-top: 240px;
+    padding-bottom: 200px;
+    background-image: url("../../../nftcollection/banner2.png");
+    background-size: cover;
+    width: 100%;
+    .shade {
+      width: 100%;
+      height: 80%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: linear-gradient(180deg, #272727 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    h1 {
+      font-family: "Trap800";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 93.4404px;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .multiart-btns {
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      button {
+        font-family: "Trap500";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        color: #ffffff;
+        padding: 15px 0px;
+        background: rgba(255, 255, 255, 0.27);
+        border: 2.18552px solid #ffffff;
+        border-radius: 3.64253px;
+        width: 160px;
+        margin-right: 75px;
+        transition: all 0.3s linear;
+        &:hover {
+          background-color: #000;
+        }
+        &:last-child {
+          background-color: #000;
+          transition: all 0.3s linear;
+          &:hover {
+            background: rgba(255, 255, 255, 0.27);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-layer {
+    padding: 54px 300px 40px 265px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h6 {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
+    p {
+      font-family: "Trap500";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      .ico {
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .create-product-content {
+    margin-bottom: 115px;
+    margin-top: 100px;
+    display: flex;
+
+    .left {
+      padding-left: 60px;
+      width: 33%;
+      h5 {
+        font-family: "Trap700";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        color: #000000;
+        text-transform: capitalize;
+      }
+      h6 {
+        font-family: "Trap500";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 28px;
+        color: #000000;
+      }
+      .upload-file {
+        padding: 110px 60px;
+        border: 3px dashed #000000;
+        border-radius: 5px;
+        width: fit-content;
+        margin-bottom: 40px;
+        p {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 20px;
+          color: #000000;
+          text-align: center;
+        }
+        .uploader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input {
+            display: none;
+          }
+
+          label {
+            font-family: "Trap600";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 48px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #ffffff;
+            background: linear-gradient(0deg, #000000, #000000);
+            box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 160px;
+            cursor: pointer;
+            text-align: center;
+          }
+        }
+      }
+      .note {
+        h4 {
+          font-family: "Trap700";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          color: #000000;
+          &:first-child {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .right {
+      width: 63%;
+      .product-data {
+        padding: 42px 42px 45px 39px;
+        border: 2px solid #000000;
+        border-radius: 11px;
+        .product-entries {
+          p {
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #000000;
+            text-transform: capitalize;
+            margin-bottom: 0;
+          }
+
+          .text-area {
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            height: 121px;
+            width: 100%;
+            padding: 5px 20px;
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            color: #000000;
+          }
+          input {
+            background: #ffffff;
+            border: 2px solid #000000;
+            border-radius: 4px;
+            height: 51px;
+            width: 100%;
+            padding: 5px 20px;
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 28px;
+            color: #000000;
+          }
+        }
+      }
+      .custom-select {
+        select {
+          background: #ffffff;
+          border: 2px solid #000000;
+          border-radius: 4px;
+          height: 51px;
+          width: 100%;
+          padding: 5px 20px;
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 28px;
+          color: #000000;
+          cursor: pointer;
+          position: relative;
+          &:focus {
+            box-shadow: none;
+          }
+          option {
+            background-color: white;
+            color: #000 !important;
+          }
+        }
+      }
+      button {
+        background: #000000;
+        border-radius: 4px;
+        width: 100%;
+        margin-top: 60px;
+        font-family: "Trap700";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #ffffff;
+        border: none;
+        padding: 14px 0;
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+.modal-content {
+  // background-color: transparent !important;
+  // border: none !important;
+}
+.create-product-modal {
+  // padding: 35px;
+  border: 3px solid #000;
+  border-radius: 20px;
+  background-color: #fff;
+  p {
+    font-family: "Trap400";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    border-bottom: 1px solid #535353;
+    text-transform: capitalize;
+    padding-left: 10px;
+  }
+  .gas-fee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #272727;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    p {
+      border-bottom: none;
+      padding-left: 20px;
+    }
+    h2 {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 27px;
+      color: #000000;
+      margin-bottom: 12px;
+
+      .ico {
+        margin-right: 5px;
+      }
+    }
+    h6 {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 16px;
+      color: #868080;
+      text-align: end;
+    }
+  }
+  .wallet-paybtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    button {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 21px;
+      color: #ffffff;
+      border: none;
+      background: #000;
+      border-radius: 8px;
+      width: 70%;
+      padding: 13px;
+    }
+  }
+  .confirm-btn {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    button {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 20px;
+      color: #4e4e4e;
+      border: none;
+      width: 30%;
+      padding: 10px;
+      margin-right: 20px;
+      text-transform: capitalize;
+      background: #a0a0a0;
+      border-radius: 4.4px;
+
+      &:last-child {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .create-product {
+    .create-product-content {
+      justify-content: space-between;
+      .left {
+        padding-left: 0;
+        width: 33%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .create-product {
+    .bottom-layer {
+      padding: 30px 20px;
+      background-color: #000;
+
+      h6 {
+        font-size: 12px;
+        padding-top: 5px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+    .create-product-content {
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-top: 50px;
+      .left {
+        padding-left: 0;
+        width: 100%;
+        order: 2;
+      }
+
+      .right {
+        padding-left: 0;
+        width: 100%;
+        margin-bottom: 30px;
+        .product-data {
+          padding: 20px 20px 20px 20px;
+          border: 2px solid #000000;
+          border-radius: 11px;
+
+          .product-entries {
+            p {
+              font-size: 14px;
+            }
+            input {
+              height: 40px;
+              padding: 5px 10px;
+              font-size: 15px;
+            }
+            .text-area {
+              height: 71px;
+              padding: 5px 10px;
+              font-size: 15px;
+            }
+          }
+        }
+        .custom-select {
+          select {
+            height: 31px;
+            width: 100%;
+            padding: 5px 20px;
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 28px;
+            color: #000000;
+            cursor: pointer;
+            position: relative;
+          }
+        }
+        button {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .multiArtproduct-banner {
+      padding-top: 130px;
+      padding-bottom: 100px;
+      h1 {
+        font-size: 30px;
+      }
+      .multiart-btns {
+        display: none;
+      }
+    }
+  }
+
+  .create-product-modal {
+    border: 2px solid #000;
+    p {
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    .gas-fee {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      p {
+        border-bottom: none;
+        padding-left: 10px;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+        .ico {
+          margin-right: 5px;
+          width: 12px;
+        }
+      }
+      h6 {
+        font-size: 16px;
+      }
+    }
+    .wallet-paybtn {
+      margin-top: 30px;
+      button {
+        font-size: 15px;
+        width: 70%;
+        padding: 13px;
+      }
+    }
+    .confirm-btn {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      margin-left: 30px;
+      button {
+        font-size: 16px;
+        line-height: 20px;
+        color: #4e4e4e;
+        border: none;
+        width: 30%;
+        padding: 10px;
+        margin-right: 20px;
+        text-transform: capitalize;
+        background: #a0a0a0;
+        border-radius: 4.4px;
+
+        &:last-child {
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    }
+  }
+}

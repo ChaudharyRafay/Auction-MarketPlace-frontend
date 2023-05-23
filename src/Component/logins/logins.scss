@@ -1,0 +1,618 @@
+.wallet-Login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .left-wlogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+    h1 {
+      font-family: "Trap600";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 33px;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+
+      color: #000000;
+    }
+    .social-icons {
+      margin-top: 40px;
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .right-wlogin {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      font-family: "Trap600";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 33px;
+      text-transform: capitalize;
+      color: #000000;
+    }
+    p {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.5445px;
+      line-height: 20px;
+      color: #000000;
+      mix-blend-mode: normal;
+    }
+    .nav-tabs {
+      border: none;
+      .nav-item {
+        margin-right: 15px;
+      }
+    }
+    .nav-link {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 0;
+      color: #000000;
+      border: none;
+      margin-right: 20px;
+      text-transform: capitalize;
+      img {
+        margin-right: 5px;
+      }
+      margin-bottom: 50px;
+
+      &.active {
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 5px;
+          background-color: #000;
+          position: absolute;
+          bottom: -60%;
+          left: 0;
+          animation: myAnim 2s ease 0s 1 normal forwards;
+        }
+        @keyframes myAnim {
+          0% {
+            opacity: 0;
+            transform: rotateY(100deg);
+            transform-origin: left;
+          }
+
+          100% {
+            opacity: 1;
+            transform: rotateY(0);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 95%;
+      // margin-top: 50px;
+      .wallet-connect {
+        display: flex;
+        align-items: center;
+        border: 2px solid #000000;
+        border-radius: 2.92876px;
+        padding: 13px 40px;
+        margin-bottom: 20px;
+        transition: all 0.5s linear;
+        cursor: pointer;
+        p {
+          margin-bottom: 0;
+          font-family: "Trap300";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20.8218px;
+          line-height: 23px;
+          color: #000000;
+          transition: all 0.5s linear;
+          margin-left: 25px;
+        }
+
+        &:hover {
+          background-color: #000;
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+    h6 {
+      font-family: "Trap300";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000000;
+      text-align: left;
+      width: 95%;
+      a {
+        font-family: "Trap400";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #000000;
+        margin: 0 4px;
+      }
+    }
+    .login-btn {
+      background-color: #000;
+      border: 1px solid #000;
+      font-family: "Trap";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 26px;
+      color: #ffffff;
+    }
+  }
+}
+
+.phone-logins {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  .left-phone-logins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+    h1 {
+      font-family: "Trap600";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 33px;
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+
+      color: #000000;
+    }
+    .social-icons {
+      margin-top: 40px;
+      a {
+        margin-left: 10px;
+      }
+    }
+  }
+  .right-phone-logins {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-family: "Trap600";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 33px;
+      text-transform: capitalize;
+      color: #000000;
+      text-align: center;
+    }
+    p {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.5445px;
+      line-height: 20px;
+      text-align: center;
+      color: #000000;
+      mix-blend-mode: normal;
+    }
+    .nav-tabs {
+      border: none;
+      .nav-item {
+        margin-right: 15px;
+      }
+    }
+    .nav-link {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 0;
+      color: #000000;
+      border: none;
+      margin-right: 20px;
+      text-transform: capitalize;
+      img {
+        margin-right: 5px;
+      }
+      margin-bottom: 50px;
+
+      &.active {
+        position: relative;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 5px;
+          background-color: #000;
+          position: absolute;
+          bottom: -60%;
+          left: 0;
+          animation: myAnim 2s ease 0s 1 normal forwards;
+        }
+        @keyframes myAnim {
+          0% {
+            opacity: 0;
+            transform: rotateY(100deg);
+            transform-origin: left;
+          }
+
+          100% {
+            opacity: 1;
+            transform: rotateY(0);
+            transform-origin: left;
+          }
+        }
+      }
+    }
+    .tab-content {
+      width: 95%;
+      .login-input {
+        button.conti {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 26px;
+          color: #000000;
+          border-radius: 2.92876px;
+          border: 3px solid #000000;
+          margin-top: 40px;
+          width: 100%;
+          padding: 20px;
+          text-transform: capitalize;
+        }
+
+        .privacy-check {
+          display: flex;
+          align-items: center;
+          margin-top: 30px;
+          input {
+            width: fit-content;
+            margin-right: 10px;
+          }
+        }
+        input {
+          font-family: "Trap300";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 22px;
+          color: #000000;
+          width: 100%;
+          padding: 20px;
+        }
+        input.codePhone {
+          font-family: "Trap300";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 22px;
+          color: #000000;
+          width: 15%;
+          padding: 20px 0px;
+          text-align: center;
+        }
+        input.phone-numb {
+          width: 80%;
+          text-align: center;
+        }
+      }
+    }
+    h6 {
+      font-family: "Trap300";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000000;
+      text-align: left;
+      width: 95%;
+      a {
+        font-family: "Trap400";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 13px;
+        letter-spacing: 0px;
+        text-align: left;
+        color: #000000;
+        margin: 0 4px;
+      }
+    }
+    .login-btn {
+      font-family: "Trap500";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 26px;
+      color: #ffffff;
+      background-color: #000;
+      border: 1px solid #000;
+      width: 100%;
+      padding: 20px 0;
+      margin-top: 70px;
+    }
+  }
+}
+
+.mail-login-modal {
+  p {
+    font-family: "Trap400";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    color: #000000;
+    text-align: center;
+  }
+  h6 {
+    font-family: "Trap600";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 36px;
+    color: #000000;
+    text-align: center;
+  }
+
+  h5 {
+    font-family: "Trap400";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    span {
+      margin-top: 10px;
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 40px;
+      color: #000000;
+      cursor: pointer;
+    }
+  }
+  .mail-otp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      input {
+        width: 50px;
+        height: 50px;
+        background: #afafaf;
+        font-family: "Trap500";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 36px;
+        color: #000000;
+        border: none;
+        text-align: center;
+        margin-left: 5px;
+        &:focus-visible {
+          border: none;
+          outline: none;
+        }
+        &:active {
+          border: none;
+        }
+        &::-webkit-inner-spin-button {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .wallet-Login {
+    min-height: 100vh;
+    .left-wlogin {
+      width: 40%;
+      h1 {
+        font-size: 25px;
+      }
+      .social-icons {
+        margin-top: 20px;
+      }
+    }
+
+    .right-wlogin {
+      width: 60%;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 17px;
+      }
+      .nav-tabs {
+        .nav-item {
+          margin-right: 10px;
+        }
+      }
+      .nav-link {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .tab-content {
+        width: 95%;
+        .wallet-connect {
+          padding: 13px 40px;
+          margin-bottom: 20px;
+          p {
+            font-size: 20px;
+            margin-left: 25px;
+          }
+        }
+      }
+      h6 {
+        font-size: 14px;
+        width: 95%;
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .phone-logins {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    .left-phone-logins {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 40%;
+
+      h1 {
+        font-size: 25px;
+      }
+      .social-icons {
+        margin-top: 20px;
+      }
+    }
+
+    .right-phone-logins {
+      width: 60%;
+
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 17px;
+      }
+      .nav-tabs {
+        .nav-item {
+          margin-right: 10px;
+        }
+      }
+      .nav-link {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .tab-content {
+        width: 95%;
+        .login-input {
+          input {
+            font-size: 18px;
+            line-height: 22px;
+            width: 100%;
+            padding: 16px;
+          }
+          button.conti {
+            font-size: 20px;
+            line-height: 20px;
+            border-radius: 2px;
+            border: 2px solid #000000;
+            margin-top: 35px;
+            width: 100%;
+            padding: 18px;
+          }
+
+          .privacy-check {
+            margin-top: 30px;
+          }
+        }
+      }
+      h6 {
+        font-size: 13px;
+        line-height: 17px;
+        a {
+          font-size: 15px;
+          line-height: 13px;
+        }
+      }
+      .login-btn {
+        font-size: 20px;
+        line-height: 20px;
+        padding: 18px 0;
+        margin-top: 35px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wallet-Login {
+    min-height: 100vh;
+    .left-wlogin {
+      width: 35%;
+      h1 {
+        font-size: 25px;
+      }
+      .social-icons {
+        margin-top: 20px;
+      }
+    }
+
+    .right-wlogin {
+      width: 65%;
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 17px;
+      }
+      .nav-tabs {
+        .nav-item {
+          margin-right: 10px;
+        }
+      }
+      .nav-link {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+      .tab-content {
+        width: 95%;
+        .wallet-connect {
+          padding: 13px 40px;
+          margin-bottom: 20px;
+          p {
+            font-size: 20px;
+            margin-left: 25px;
+          }
+        }
+      }
+      h6 {
+        font-size: 14px;
+        width: 95%;
+        a {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

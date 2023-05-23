@@ -1,0 +1,1198 @@
+.bid-page {
+  margin-bottom: 200px;
+  .bid-page-content {
+    padding: 0;
+    .bid-top {
+      padding-top: 160px;
+      padding-bottom: 110px;
+      padding-bottom: px;
+      display: flex;
+      border-bottom: 1px solid #beb5b5;
+      .left-bid {
+        width: 50%;
+        padding-right: 35px;
+        img {
+          filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+        }
+        .bid-impressions {
+          margin-top: 30px;
+          display: flex;
+          justify-content: space-between;
+          p {
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            color: #000000;
+            margin-bottom: 0;
+
+            display: flex;
+            align-items: center;
+            span {
+              mix-blend-mode: normal;
+              opacity: 0.5;
+              margin-right: 22px;
+              margin-bottom: 0;
+              cursor: pointer;
+            }
+            .ico {
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+
+      .right-bid {
+        width: 50%;
+        padding-left: 35px;
+        h6 {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 22px;
+          color: #ffffff;
+          background: #000000;
+          border-radius: 15px;
+          width: fit-content;
+          padding: 4px 20px;
+          text-transform: capitalize;
+        }
+        h1 {
+          font-family: "Trap700";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 50px;
+          line-height: 55px;
+          color: #000000;
+          margin-top: 17px;
+          margin-bottom: 10px;
+        }
+
+        .users {
+          display: flex;
+          justify-content: space-between;
+          .artist {
+            display: flex;
+            align-items: center;
+            img {
+              margin-right: 11px;
+              border-radius: 100%;
+              border: 2px solid #000;
+            }
+            h5 {
+              font-family: "Trap400";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 20px;
+              color: #000000;
+              margin-bottom: 0;
+              text-transform: capitalize;
+            }
+            h4 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 22px;
+              line-height: 24px;
+              color: #000000;
+              text-transform: capitalize;
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .bidding-box {
+          padding: 40px 0px 45px 27px;
+          background: #f5f5f5;
+          margin-top: 38px;
+          .highest-bid {
+            p {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px;
+              color: #000000;
+            }
+            h2 {
+              font-family: "Trap700";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 26px;
+              line-height: 29px;
+              color: #000000;
+            }
+            p {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px;
+              text-align: justify;
+              color: #000000;
+            }
+          }
+
+          .auction-end {
+            p {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px;
+              color: #000000;
+            }
+
+            .timer {
+              display: flex;
+              .days {
+                margin-right: 11px;
+
+                h4 {
+                  font-family: "Trap600";
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 18px;
+                  color: #000000;
+                  text-align: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #d8d8d8;
+                  border-radius: 4px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+                p {
+                  font-family: "Trap600";
+                  font-style: normal;
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 18px;
+                  color: #796d6d;
+                  text-align: center;
+                  text-transform: capitalize;
+                  margin-top: 12px;
+                }
+              }
+            }
+          }
+
+          .your-bid {
+            h1 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 26px;
+              line-height: 29px;
+              text-align: justify;
+              color: #000000;
+              mix-blend-mode: normal;
+              opacity: 0.5;
+              text-transform: capitalize;
+            }
+            button {
+              font-family: "Trap600";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 18px;
+              text-align: justify;
+              color: #ffffff;
+              background-color: #000;
+              border: 1px solid #000;
+              padding: 10px 40px;
+            }
+            input {
+              font-family: "Trap700";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 18px;
+              text-align: justify;
+              color: #000;
+              border: 1px solid #000;
+              padding: 10px 40px 10px 10px;
+              &:focus-visible {
+                border-radius: 0;
+                outline: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bid-discription {
+      padding-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      h2 {
+        font-family: "Trap700";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        color: #000000;
+        text-transform: capitalize;
+      }
+      .left-bid-discript {
+        width: 50%;
+        p {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: #000000;
+          margin-top: 20px;
+        }
+      }
+      .right-bid-discript {
+        width: 40%;
+        .last-bid-place {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+          .left {
+            display: flex;
+            align-items: center;
+            h4 {
+              font-family: "Trap400";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 20px;
+              color: #000000;
+              margin-bottom: 0;
+            }
+            h5 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 20px;
+              color: #000000;
+              margin-bottom: 0;
+            }
+            img {
+              max-width: 48px;
+              max-height: 48px;
+              border-radius: 100%;
+              border: 1px solid #000;
+              margin-right: 11px;
+            }
+          }
+          .right {
+            h4 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 26px;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+    .bid-bottom {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 60px;
+      border-bottom: 1px solid #beb5b5;
+      h2 {
+        font-family: "Trap700";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 26px;
+        color: #000000;
+        text-transform: capitalize;
+      }
+      .bid-detail {
+        width: 40%;
+        .bid-detail-content {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+          h4 {
+            font-family: "Trap600";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 22px;
+            color: #000000;
+            margin-bottom: 0;
+          }
+          p {
+            font-family: "Trap400";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            color: #000000;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .bit-activity {
+        width: 40%;
+        .last-bid-place {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+          .left {
+            display: flex;
+            align-items: center;
+            h4 {
+              font-family: "Trap400";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 20px;
+              color: #000000;
+              margin-bottom: 0;
+            }
+            h5 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 18px;
+              line-height: 20px;
+              color: #000000;
+              margin-bottom: 0;
+            }
+            img {
+              max-width: 48px;
+              max-height: 48px;
+              border-radius: 100%;
+              border: 1px solid #000;
+              margin-right: 11px;
+            }
+          }
+          .right {
+            h4 {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 26px;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .review-product {
+    .review-container {
+      border: 1px solid #796d6d;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-bottom: 50px;
+
+      .left {
+        img {
+          width: 55px;
+          height: 55px;
+          margin-right: 15px;
+        }
+        h6 {
+          margin-bottom: 0;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      .right {
+        .ico {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .review-wrapper {
+      p {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+      .r-ico {
+        cursor: pointer;
+      }
+
+      .review-area {
+        width: 90%;
+        margin-top: 20px;
+        background-color: #e2dddd;
+        padding: 10px;
+      }
+      .name-mail {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 49%;
+          background-color: #e2dddd;
+          padding: 7px 10px;
+          border: 1px solid #000;
+        }
+      }
+
+      button {
+        width: 100px;
+        border: 1px solid #000;
+        background-color: #000;
+        color: #fff;
+        margin-top: 20px;
+        padding: 10px 0;
+        font-family: "Trap600";
+        border-radius: 8px;
+      }
+    }
+  }
+}
+.winner-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 15px;
+  column-gap: 20px;
+
+  .auction-winner-card {
+    width: fit-content;
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    border: 2.79988px solid #000000;
+    border-radius: 9.33294px;
+    width: 380px;
+    padding: 15px 15px 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 70px;
+        border-radius: 100%;
+        border: 1.54079px solid #000000;
+        margin-right: 10px;
+      }
+      h2 {
+        font-family: "Trap600";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23.3324px;
+        line-height: 26px;
+        color: #ffffff;
+        margin-bottom: 6.5;
+      }
+      h3 {
+        font-family: "Trap";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14.9327px;
+        line-height: 16px;
+        color: #ffffff;
+        margin-bottom: 0;
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      h4 {
+        font-family: "Trap";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14.9327px;
+        line-height: 7px;
+        color: #ffffff;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1850px) {
+  .live-auction {
+    .winner-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+      column-gap: 15px;
+      .auction-winner-card {
+        width: fit-content;
+        background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        border: 2.79988px solid #000000;
+        border-radius: 9.33294px;
+        width: 380px;
+        padding: 15px 15px 15px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            width: 70px;
+            border-radius: 100%;
+            border: 1.54079px solid #000000;
+            margin-right: 10px;
+          }
+          h2 {
+            font-family: "Trap600";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 23.3324px;
+            line-height: 26px;
+            color: #ffffff;
+            margin-bottom: 6.5;
+          }
+          h3 {
+            font-family: "Trap";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14.9327px;
+            line-height: 16px;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          h4 {
+            font-family: "Trap";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14.9327px;
+            line-height: 16px;
+            color: #ffffff;
+            margin-bottom: 0;
+            text-transform: capitalize;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .bid-page {
+    margin-bottom: 0px;
+    .bid-page-content {
+      .bid-top {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        .left-bid {
+          width: 50%;
+          padding-right: 35px;
+          .bid-impressions {
+            margin-top: 30px;
+            p {
+              font-size: 16px;
+              .ico {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .right-bid {
+          width: 50%;
+          padding-left: 35px;
+          h6 {
+            font-size: 18px;
+            padding: 6px 20px;
+          }
+          h1 {
+            font-size: 40px;
+            line-height: 50px;
+          }
+
+          .users {
+            .artist {
+              h5 {
+                font-size: 16px;
+              }
+              h4 {
+                font-size: 18px;
+              }
+            }
+          }
+
+          .bidding-box {
+            padding: 40px 0px 45px 27px;
+            margin-top: 38px;
+            .highest-bid {
+              p {
+                font-size: 16px;
+              }
+              h2 {
+                font-size: 22px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+
+            .auction-end {
+              p {
+                font-size: 16px;
+              }
+
+              .timer {
+                .days {
+                  margin-right: 11px;
+                  h4 {
+                    font-size: 16px;
+                    width: 50px;
+                    height: 50px;
+                    letter-spacing: 2px;
+                  }
+                  p {
+                    font-size: 16px;
+                    margin-top: 12px;
+                  }
+                }
+              }
+            }
+
+            .your-bid {
+              h1 {
+                font-size: 22px;
+              }
+              button {
+                font-size: 14px;
+                padding: 10px 40px;
+                width: 40%;
+                line-height: 19px;
+              }
+              input {
+                font-size: 16px;
+                padding: 10px 40px 10px 10px;
+                width: 57%;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-discription {
+        padding-top: 40px;
+        h2 {
+          font-size: 20px;
+        }
+        .left-bid-discript {
+          width: 50%;
+          p {
+            font-size: 16px;
+            margin-top: 10px;
+          }
+        }
+        .right-bid-discript {
+          width: 40%;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+                margin-right: 10px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-bottom {
+        margin-top: 25px;
+        padding-bottom: 50px;
+        h2 {
+          font-size: 20px;
+        }
+
+        .bid-detail {
+          width: 40%;
+          .bid-detail-content {
+            margin-top: 20px;
+            h4 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 15.5px;
+            }
+          }
+        }
+
+        .bit-activity {
+          width: 40%;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+                margin-bottom: 0;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .bid-page {
+    margin-bottom: 0px;
+    .bid-page-content {
+      .bid-top {
+        padding-top: 100px;
+        padding-bottom: 80px;
+        .left-bid {
+          width: 50%;
+          padding-right: 35px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .bid-impressions {
+            margin-top: 20px;
+            p {
+              font-size: 16px;
+              .ico {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .right-bid {
+          width: 50%;
+          padding-left: 35px;
+          h6 {
+            font-size: 16px;
+            padding: 6px 20px 2px 20px;
+            border-radius: 20px;
+          }
+          h1 {
+            font-size: 35px;
+            line-height: 50px;
+          }
+
+          .users {
+            img {
+              max-width: 45px;
+            }
+            .artist {
+              h5 {
+                font-size: 14px;
+              }
+              h4 {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .bidding-box {
+            padding: 30px 0px 35px 27px;
+            margin-top: 38px;
+            .highest-bid {
+              p {
+                font-size: 16px;
+              }
+              h2 {
+                font-size: 22px;
+              }
+              p {
+                font-size: 16px;
+              }
+            }
+
+            .auction-end {
+              p {
+                font-size: 16px;
+              }
+
+              .timer {
+                .days {
+                  margin-right: 11px;
+                  h4 {
+                    font-size: 16px;
+                    width: 50px;
+                    height: 50px;
+                    letter-spacing: 2px;
+                  }
+                  p {
+                    font-size: 16px;
+                    margin-top: 12px;
+                  }
+                }
+              }
+            }
+
+            .your-bid {
+              h1 {
+                font-size: 22px;
+              }
+              button {
+                font-size: 14px;
+                padding: 10px 40px;
+                width: 40%;
+                line-height: 19px;
+              }
+              input {
+                font-size: 16px;
+                padding: 10px 40px 10px 10px;
+                width: 57%;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-discription {
+        padding-top: 40px;
+        h2 {
+          font-size: 20px;
+        }
+        .left-bid-discript {
+          width: 50%;
+          p {
+            font-size: 16px;
+            margin-top: 10px;
+          }
+        }
+        .right-bid-discript {
+          width: 40%;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+                margin-right: 10px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-bottom {
+        margin-top: 25px;
+        padding-bottom: 50px;
+        h2 {
+          font-size: 20px;
+        }
+
+        .bid-detail {
+          width: 40%;
+          .bid-detail-content {
+            margin-top: 20px;
+            h4 {
+              font-size: 18px;
+            }
+            p {
+              font-size: 15.5px;
+            }
+          }
+        }
+
+        .bit-activity {
+          width: 40%;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+                margin-bottom: 0;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .bid-page {
+    margin-bottom: 0px;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    .bid-page-content {
+      .bid-top {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .left-bid {
+          width: 100%;
+          padding-right: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          order: 2;
+          img {
+            margin: auto;
+            max-width: 100%;
+          }
+          .bid-impressions {
+            margin-top: 20px;
+            p {
+              font-size: 16px;
+              .ico {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+
+        .right-bid {
+          width: 100%;
+          margin-top: 20px;
+          padding-left: 0px;
+          h6 {
+            font-size: 15px;
+            padding: 6px 20px 2px 20px;
+            border-radius: 20px;
+          }
+          h1 {
+            font-size: 25px;
+            line-height: 50px;
+          }
+
+          .users {
+            img {
+              max-width: 45px;
+            }
+            .artist {
+              margin-bottom: 20px;
+              h5 {
+                font-size: 14px;
+              }
+              h4 {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .bidding-box {
+            padding: 30px 0px 35px 27px;
+            margin-top: 0px;
+            margin-bottom: 30px;
+            .highest-bid {
+              p {
+                font-size: 15px;
+              }
+              h2 {
+                font-size: 20px;
+              }
+              p {
+                font-size: 15px;
+              }
+            }
+
+            .auction-end {
+              p {
+                font-size: 15px;
+              }
+
+              .timer {
+                .days {
+                  margin-right: 10px;
+                  h4 {
+                    font-size: 15px;
+                    width: 45px;
+                    height: 45px;
+                    letter-spacing: 2px;
+                  }
+                  p {
+                    font-size: 15px;
+                    margin-top: 2px;
+                  }
+                }
+              }
+            }
+
+            .your-bid {
+              h1 {
+                font-size: 18px;
+                margin-top: 0;
+                margin-bottom: 5px;
+              }
+              button {
+                font-size: 13px;
+                padding: 10px 20px;
+                width: 40%;
+              }
+              input {
+                font-size: 15px;
+                padding: 10px 20px 10px 10px;
+                width: 57%;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-discription {
+        padding-top: 30px;
+        flex-direction: column;
+        h2 {
+          font-size: 18px;
+        }
+        .left-bid-discript {
+          width: 100%;
+          p {
+            font-size: 15px;
+            margin-top: 10px;
+            text-align: justify;
+          }
+        }
+        .right-bid-discript {
+          width: 100%;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+                margin-right: 10px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+
+      .bid-bottom {
+        margin-top: 25px;
+        padding-bottom: 50px;
+        flex-direction: column;
+        h2 {
+          font-size: 20px;
+        }
+
+        .bid-detail {
+          width: 100%;
+          .bid-detail-content {
+            margin-top: 16px;
+
+            h4 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .bit-activity {
+          width: 100%;
+          margin-top: 25px;
+          .last-bid-place {
+            margin-top: 20px;
+            .left {
+              h4 {
+                font-size: 16px;
+              }
+              h5 {
+                font-size: 16px;
+                margin-bottom: 0;
+              }
+              img {
+                max-width: 48px;
+                max-height: 48px;
+              }
+            }
+            .right {
+              h4 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

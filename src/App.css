@@ -1,0 +1,38 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Trap300";
+  src: url("./assets/font/Trap-Light.otf");
+}
+@font-face {
+  font-family: "Trap400";
+  src: url("./assets/font/Trap-Regular.otf");
+}
+@font-face {
+  font-family: "Trap500";
+  src: url("./assets/font/Trap-Medium.otf");
+}
+@font-face {
+  font-family: "Trap600";
+  src: url("./assets/font/Trap-SemiBold.otf");
+}
+@font-face {
+  font-family: "Trap700";
+  src: url("./assets/font/Trap-Bold.otf");
+}
+@font-face {
+  font-family: "Trap900";
+  src: url("./assets/font/Trap-Black.otf");
+}
+
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.nav-logo {
+  width: 130px !important;
+}

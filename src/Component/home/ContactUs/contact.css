@@ -1,0 +1,169 @@
+.c-main {
+  background: #ffffff;
+  width: 100%;
+  overflow: hidden;
+}
+
+.c-main .c-inner {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.c-main .css-1b0ve20 > :not(style) {
+  margin: 8px;
+  /* background: blue; */
+  width: 100%;
+}
+
+.c-main .email-input {
+  /* background: red; */
+  padding-top: 50px;
+}
+
+.c-main .name-input {
+  /* background: red; */
+  padding-top: 10px;
+}
+
+.c-main .message-input {
+  /* background: red; */
+  padding-top: 120px;
+}
+
+.c-main .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  font-family: "Trap600";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19.4721px;
+  line-height: 21px;
+  letter-spacing: 0.01em;
+
+  color: #707070;
+}
+
+.c-main .css-i4bv87-MuiSvgIcon-root {
+  width: 36px !important;
+  height: 36px !important;
+  margin-bottom: 5px;
+  color: #cecece !important;
+
+  /* font-size: 44px; */
+}
+
+.c-main label + .css-v4u5dn-MuiInputBase-root-MuiInput-root {
+  margin-top: 22px !important;
+}
+
+.c-main .btn {
+  padding-top: 50px;
+  padding-bottom: 220px;
+}
+
+.c-main .btn button {
+  background: #000000;
+  border-radius: 5.2244px;
+
+  font-family: "Trap400";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25.0771px;
+  color: #ffffff;
+
+  padding: 8px 17px;
+}
+
+.c-main .c-content-r {
+  padding-top: 180px;
+  padding-left: 135px;
+}
+
+.c-main .c-content-r .c-para {
+  font-family: "Trap600";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+
+  color: #000000;
+}
+.c-main .c-social-icon {
+  display: flex;
+  margin-top: 40px;
+}
+
+.c-main .mycircle {
+  background-color: transparent;
+  border: 0.69427px solid #535353;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.c-main .mycircle:hover {
+  background-color: #000;
+}
+.c-main .mycircle:hover .icos {
+  color: #cecece !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .c-main .mycircle {
+    background-color: transparent;
+    border: 0.69427px solid #535353;
+    border-radius: 50%;
+    width: 40px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  svg.icos.iconify.iconify--ri {
+    width: 25px;
+  }
+  svg.icos.iconify.iconify--ic {
+    width: 25px;
+  }
+  svg.icos.iconify.iconify--typcn {
+    width: 25px;
+  }
+  .c-main .email-input {
+    /* background: red; */
+    padding-top: 0px;
+  }
+  .c-main .message-input {
+    /* background: red; */
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .c-main .btn {
+    padding-top: 50px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .c-main .c-content-r {
+    padding-top: 40px;
+    padding-left: 0px;
+  }
+
+  .c-main .c-content-r .c-para {
+    margin-top: 1rem !important;
+  }
+  .c-main .c-social-icon {
+    display: flex;
+    margin-top: 0px;
+    justify-content: center;
+  }
+}

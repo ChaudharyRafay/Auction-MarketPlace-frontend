@@ -1,0 +1,874 @@
+.userLookingWrap {
+  .back-btn {
+    background-color: #000;
+    padding: 58px 0 44px 260px;
+    a {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: #ffffff;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }
+  .profile-banner {
+    background: #c05f5f;
+    height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h1 {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 59.0909px;
+      text-transform: capitalize;
+      color: #000000;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    button {
+      position: absolute;
+      right: 3%;
+      bottom: 8%;
+      background-color: transparent;
+      border: none;
+      &:last-child {
+        filter: drop-shadow(0px 7.07871px 7.07871px rgba(0, 0, 0, 0.25));
+        background: rgba(209, 193, 193, 0.8);
+        font-family: "Trap500";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17.8905px;
+        line-height: 20px;
+        color: #000000;
+        padding: 13px 0;
+        width: 180px;
+        right: 8%;
+        bottom: 8%;
+      }
+    }
+  }
+
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 270px;
+    padding-right: 140px;
+    .left {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      .user-dp {
+        margin-top: -100px;
+        width: 230px;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none !important;
+        border-radius: 100%;
+        background-color: #fff;
+        position: relative;
+        overflow: hidden;
+        h6 {
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14.5357px;
+          line-height: 16px;
+          color: #141414;
+          margin-top: 13px;
+          text-align: center;
+          span {
+            color: #51a7f8;
+          }
+        }
+        p {
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 7px;
+          line-height: 10px;
+          color: #979797;
+          text-align: center;
+        }
+        input {
+          display: none;
+        }
+        label {
+          background-color: transparent;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          z-index: 2;
+        }
+        .profile-dp {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          z-index: 1;
+        }
+      }
+      .user-details {
+        margin-left: 23px;
+        padding-top: 22px;
+        .user-name {
+          h6 {
+            font-family: "Trap600";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25.624px;
+            color: #000000;
+          }
+        }
+        .user-address {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #000000;
+          border-radius: 23px;
+          width: 160px;
+          padding: 8px 0;
+          p {
+            font-family: "Trap400";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11.5923px;
+            color: #ffffff;
+            line-height: 0;
+            margin-bottom: 0;
+            margin: 0 7px 0 13px;
+          }
+          img {
+            cursor: pointer;
+          }
+        }
+        .user-share {
+          margin-top: 14px;
+          display: flex;
+          align-items: center;
+          .ico {
+            margin-right: 13px;
+            cursor: pointer;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .followers {
+        display: flex;
+        padding-top: 22px;
+        margin-left: 88px;
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 20px;
+        }
+        h3 {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15.4563px;
+          line-height: 17px;
+          letter-spacing: 2.89806px;
+          color: #000000;
+          margin-bottom: 11px;
+        }
+        p {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 11.5923px;
+          line-height: 13px;
+          text-transform: capitalize;
+          color: #5a5a5a;
+        }
+      }
+    }
+    .right {
+      h3 {
+        padding-top: 22px;
+        font-family: "Trap600";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 23.4912px;
+        line-height: 26px;
+        color: #141414;
+      }
+      p {
+        font-family: "Trap400";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15.6608px;
+        line-height: 17px;
+
+        color: #000000;
+      }
+
+      .social-ico {
+        display: flex;
+        justify-content: flex-end;
+        .ico {
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+
+  .profile-data {
+    padding: 100px;
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .userLookingWrap {
+    .back-btn {
+      padding: 40px 0 38px 260px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .profile-banner {
+      height: 450px;
+
+      h1 {
+        font-size: 50px;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 17px;
+          padding: 13px 0;
+          width: 170px;
+        }
+      }
+    }
+
+    .profile-header {
+      padding-left: 250px;
+      padding-right: 140px;
+
+      .left {
+        width: 58%;
+        .user-dp {
+          margin-top: -90px;
+          width: 200px;
+          height: 200px;
+          border: 6px solid #938282;
+          h6 {
+            font-size: 14px;
+            margin-top: 13px;
+          }
+          p {
+            font-size: 7px;
+          }
+        }
+        .user-details {
+          margin-left: 23px;
+          padding-top: 22px;
+
+          .user-name {
+            h6 {
+              font-size: 24px;
+            }
+          }
+          .user-address {
+            width: 160px;
+            padding: 8px 0;
+            p {
+              font-size: 12px;
+              margin: 0 7px 0 13px;
+            }
+          }
+          .user-share {
+            margin-top: 14px;
+            .ico {
+              margin-right: 13px;
+            }
+          }
+        }
+        .followers {
+          display: flex;
+          padding-top: 22px;
+          margin-left: 80px;
+          div {
+            margin-right: 20px;
+          }
+          h3 {
+            font-size: 15.4563px;
+            letter-spacing: 2.89806px;
+            margin-bottom: 11px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+      .right {
+        width: 40%;
+        h3 {
+          padding-top: 22px;
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 23.4912px;
+          line-height: 26px;
+          color: #141414;
+        }
+        p {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15.6608px;
+          line-height: 17px;
+
+          color: #000000;
+        }
+
+        .social-ico {
+          display: flex;
+          justify-content: flex-end;
+          .ico {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .userLookingWrap {
+    .back-btn {
+      padding: 40px 0 38px 260px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .profile-banner {
+      height: 450px;
+
+      h1 {
+        font-size: 50px;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 17px;
+          padding: 13px 0;
+          width: 170px;
+        }
+      }
+    }
+
+    .profile-header {
+      padding-left: 200px;
+      padding-right: 120px;
+
+      .left {
+        width: 58%;
+        .user-dp {
+          margin-top: -90px;
+          width: 200px;
+          height: 200px;
+          border: 6px solid #938282;
+          h6 {
+            font-size: 14px;
+            margin-top: 13px;
+          }
+          p {
+            font-size: 7px;
+          }
+        }
+        .user-details {
+          margin-left: 23px;
+          padding-top: 22px;
+
+          .user-name {
+            h6 {
+              font-size: 24px;
+            }
+          }
+          .user-address {
+            width: 160px;
+            padding: 8px 0;
+            p {
+              font-size: 12px;
+              margin: 0 7px 0 13px;
+            }
+          }
+          .user-share {
+            margin-top: 14px;
+            .ico {
+              margin-right: 13px;
+            }
+          }
+        }
+        .followers {
+          display: flex;
+          padding-top: 22px;
+          margin-left: 80px;
+          div {
+            margin-right: 20px;
+          }
+          h3 {
+            font-size: 15.4563px;
+            letter-spacing: 2.89806px;
+            margin-bottom: 11px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+      .right {
+        width: 40%;
+        h3 {
+          padding-top: 22px;
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 23.4912px;
+          line-height: 26px;
+          color: #141414;
+        }
+        p {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15.6608px;
+          line-height: 17px;
+
+          color: #000000;
+        }
+
+        .social-ico {
+          display: flex;
+          justify-content: flex-end;
+          .ico {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .userLookingWrap {
+    .back-btn {
+      padding: 30px 0 30px 200px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .profile-banner {
+      height: 400px;
+
+      h1 {
+        font-size: 45px;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 16px;
+          padding: 13px 0;
+          width: 150px;
+        }
+      }
+    }
+
+    .profile-header {
+      padding-left: 120px;
+      padding-right: 100px;
+
+      .left {
+        width: 100%;
+        .user-dp {
+          margin-top: -110px;
+          width: 170px;
+          height: 170px;
+          border: 6px solid #938282;
+          display: flex;
+
+          h6 {
+            font-size: 14px;
+            margin-top: 13px;
+          }
+          p {
+            font-size: 7px;
+            width: 70%;
+          }
+        }
+        .user-details {
+          margin-left: 20px;
+          padding-top: 0px;
+
+          .user-name {
+            h6 {
+              font-size: 24px;
+            }
+          }
+          .user-address {
+            width: 160px;
+            padding: 8px 0;
+            p {
+              font-size: 12px;
+              margin: 0 7px 0 13px;
+            }
+          }
+          .user-share {
+            margin-top: 14px;
+            .ico {
+              margin-right: 13px;
+            }
+          }
+        }
+        .followers {
+          padding-top: 0px;
+          margin-left: 70px;
+          div {
+            margin-right: 20px;
+          }
+          h3 {
+            font-size: 15.4563px;
+            letter-spacing: 2.89806px;
+            margin-bottom: 11px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+      .right {
+        width: 50%;
+        h3 {
+          padding-top: 22px;
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+
+        .social-ico {
+          .ico {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .userLookingWrap {
+    .back-btn {
+      padding: 30px 0 30px 150px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .profile-banner {
+      height: 350px;
+
+      h1 {
+        font-size: 45px;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 16px;
+          padding: 13px 0;
+          width: 150px;
+        }
+      }
+    }
+    .profile-data {
+      padding: 100px;
+      padding-left: 200px;
+      padding-right: 200px;
+
+      .profile-collection {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .userLookingWrap {
+    .back-btn {
+      padding: 25px 0 25px 140px;
+      a {
+        font-size: 17px;
+      }
+    }
+    .profile-banner {
+      height: 300px;
+
+      h1 {
+        font-size: 35px;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 16px;
+          padding: 13px 0;
+          width: 150px;
+        }
+      }
+    }
+
+    .profile-header {
+      padding-left: 100px;
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        .user-dp {
+          margin-top: -100px;
+          width: 140px;
+          height: 140px;
+          border: 4px solid #938282;
+          h6 {
+            font-size: 12px;
+            margin-top: 13px;
+          }
+          p {
+            font-size: 7px;
+            width: 90%;
+          }
+        }
+        .user-details {
+          margin-left: 20px;
+          padding-top: 30px;
+
+          .user-name {
+            h6 {
+              font-size: 24px;
+            }
+          }
+          .user-address {
+            width: 160px;
+            padding: 8px 0;
+            p {
+              font-size: 12px;
+              margin: 0 7px 0 13px;
+            }
+          }
+          .user-share {
+            margin-top: 14px;
+            .ico {
+              margin-right: 13px;
+            }
+          }
+        }
+        .followers {
+          padding-top: 0px;
+          margin-left: 70px;
+          div {
+            margin-right: 20px;
+          }
+          h3 {
+            font-size: 15.4563px;
+            letter-spacing: 2.89806px;
+            margin-bottom: 11px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        h3 {
+          padding-top: 22px;
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+
+        .social-ico {
+          .ico {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+    .profile-data {
+      padding: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+
+      .profile-collection {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .userLookingWrap {
+    overflow: hidden;
+    .profile-banner {
+      height: 230px;
+
+      h1 {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+      }
+      button {
+        right: 3%;
+        bottom: 8%;
+        &:last-child {
+          font-size: 14px;
+          padding: 11px 0;
+          width: 130px;
+        }
+      }
+    }
+    .back-btn {
+      padding: 20px;
+    }
+    .profile-header {
+      padding-left: 20px;
+      padding-right: 20px;
+      .left {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .user-dp {
+          margin-top: -80px;
+          width: 120px;
+          height: 120px;
+          border: 4px solid #938282;
+          h6 {
+            font-size: 8px;
+            line-height: 10px;
+            margin-top: 0px;
+          }
+          p {
+            font-size: 7px;
+            line-height: 10px;
+            margin-bottom: 8px;
+            width: 90%;
+          }
+        }
+        .res-profile {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .user-details {
+            margin-left: 0px;
+            padding-top: 20px;
+
+            .user-name {
+              h6 {
+                font-size: 16px;
+                font-size: 16px;
+              }
+            }
+            .user-address {
+              width: 130px;
+              padding: 8px 0;
+              p {
+                font-size: 10px;
+                margin: 0 7px 0 7px;
+              }
+            }
+
+            .user-share {
+              margin-top: 14px;
+              .ico {
+                margin-right: 13px;
+              }
+            }
+          }
+
+          .followers {
+            padding-top: 0px;
+            margin-left: 0px;
+            div {
+              margin-right: 10px;
+            }
+            h3 {
+              font-size: 13px;
+              letter-spacing: 1px;
+              margin-bottom: 11px;
+            }
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+        h3 {
+          padding-top: 22px;
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+
+        .social-ico {
+          .ico {
+            margin-left: 7px;
+          }
+        }
+      }
+    }
+
+    .profile-data {
+      padding: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      .userTabss {
+        display: grid;
+        grid-template-columns: 180px 150px !important;
+        overflow: auto;
+        margin-top: 30px;
+        padding-top: 20px;
+      }
+      .profile-collection {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}

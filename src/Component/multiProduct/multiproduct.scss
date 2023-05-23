@@ -1,0 +1,964 @@
+.multiArtproduct {
+  margin-bottom: 190px;
+
+  .multiArtproduct-banner {
+    background-color: rgb(3, 3, 3);
+    padding-top: 300px;
+    padding-bottom: 240px;
+    background-image: url("../../../bidcollection/banner.webp");
+    background-size: cover;
+    margin-bottom: 140px;
+    h1 {
+      font-family: "Trap800";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 93.4404px;
+      line-height: 103px;
+      color: #ffffff;
+      text-align: center;
+    }
+    .multiart-btns {
+      display: flex;
+      justify-content: center;
+      margin-left: 75px;
+      button {
+        font-family: "Trap500";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        color: #ffffff;
+        padding: 15px 0px;
+        background: rgba(255, 255, 255, 0.27);
+        border: 2.18552px solid #ffffff;
+        border-radius: 3.64253px;
+        width: 160px;
+        margin-right: 75px;
+        transition: all 0.3s linear;
+        &:hover {
+          background-color: #000;
+        }
+        &:last-child {
+          background-color: #000;
+          transition: all 0.3s linear;
+          &:hover {
+            background: rgba(255, 255, 255, 0.27);
+          }
+        }
+      }
+    }
+  }
+  .containers {
+    padding: 0 160px;
+  }
+  .multiArtproduct-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    h2 {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 46.4846px;
+      line-height: 51px;
+      text-transform: capitalize;
+      color: #000000;
+      margin-bottom: 0;
+    }
+    h6 {
+      font-family: "Trap";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 51px;
+      text-transform: capitalize;
+      color: #000000;
+      margin-bottom: 0;
+    }
+  }
+  .live-auction-cards {
+    .l-auction-card {
+      max-width: 370px;
+      padding: 21px;
+      background-color: #000;
+      border-radius: 10.2048px;
+      
+      .card-head {
+        display: flex;
+        position: relative;
+        img {
+          border-radius: 5.66931px;
+        }
+        .auction-timer {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translateX(-50%);
+          span {
+            background-color: red;
+          }
+          .day {
+            margin-right: 9px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+              font-family: "Trap700";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: #ffffff;
+              background: rgba(31, 31, 47, 0.91);
+              border-radius: 3px;
+              padding: 8px 10px 4px 10px;
+            }
+            p {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 15px;
+              text-transform: uppercase;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .card-details {
+        margin-top: 20px;
+        h2 {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16.6994px;
+          line-height: 18px;
+          color: #ffffff;
+          margin-bottom: 0;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16.6994px;
+          line-height: 21px;
+          color: #848484;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          span {
+            font-family: "Trap400";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16.6994px;
+            line-height: 18px;
+            color: #68ffd8;
+          }
+        }
+        button {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13.9773px;
+          line-height: 15px;
+          color: #ffffff;
+          width: 100%;
+          padding: 12px 0;
+          background: #00a3ff;
+          border-radius: 1.86364px;
+          border: 1px solid #00a3ff;
+          transition: all 0.3s linear;
+          &:hover {
+            color: #00a3ff;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    // ---------------Trending products
+    &.trending-products {
+      .l-auction-card {
+        background-color: transparent;
+        padding: 0;
+
+        .card-head {
+          img {
+            border-radius: 5.66931px;
+            width: 100%;
+          }
+        }
+
+        .card-details {
+          margin-top: 20px;
+          h2 {
+            color: #000;
+          }
+          h3 {
+            color: #848484;
+            font-size: 18.9737px;
+            line-height: 23px;
+            span {
+              color: #848484;
+            }
+          }
+          button {
+            font-size: 18.9773px;
+            line-height: 21px;
+            color: #ffffff;
+            background: #000;
+            border: 1px solid #000;
+            transition: all 0.3s linear;
+            &:hover {
+              color: #000;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .slick-arrow.slick-next {
+    width: 50px;
+    height: 50px;
+    top: -18% !important;
+    right: 1%;
+    &::before {
+      content: url("../../../bidcollection/sliderArrowRight.svg") !important;
+    }
+  }
+  .slick-arrow.slick-prev {
+    width: 50px;
+    height: 50px;
+    top: -18% !important;
+    left: 92%;
+    &::before {
+      content: url("../../../bidcollection/sliderArrowLeft.svg") !important;
+    }
+  }
+
+  .multiArt-products {
+    .multiArtArtist-card {
+      background-image: url("../../../bidcollection/multiartCard.png");
+      background-color: #fff;
+      background-size: cover;
+      border: 3.6329px solid #000000;
+      border-radius: 13.3206px;
+      max-width: 370px;
+      height: 320px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      position: relative;
+      .card-head {
+        background-color: #000;
+        // margin-top: 80px;
+        // height: 230px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        .card-details {
+          position: absolute;
+          top: -25%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+              max-width: 106px;
+              max-height: 106px;
+              border: 2.42193px solid #ffffff;
+              border-radius: 53.8746px;
+            }
+            .artist-name {
+              margin-top: 23px;
+              h3 {
+                font-family: "Trap600";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 21.3638px;
+                line-height: 24px;
+                color: #ffffff;
+                text-align: center;
+              }
+              h4 {
+                font-family: "Trap600";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16.9535px;
+                letter-spacing: -0.025em;
+                color: #68ffd8;
+                text-align: center;
+              }
+            }
+            .profile-btns {
+              display: flex;
+              margin-left: 13px;
+              button {
+                border: none;
+                width: 100.51px;
+                font-family: "Trap600";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16.9535px;
+                line-height: 19px;
+                text-align: center;
+                color: #ffffff;
+                background-color: transparent;
+                padding: 7.5px 0;
+                border: 1.21097px solid #ffffff;
+                border-radius: 10.8987px;
+                margin-right: 13px;
+                text-transform: capitalize;
+                letter-spacing: 0.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .slick-arrow.slick-next {
+      top: -25%;
+      right: 1%;
+    }
+    .slick-arrow.slick-prev {
+      top: -25%;
+      left: 92%;
+    }
+  }
+  .multiArt-collections {
+    .multiArt-collections-card {
+      width: 518px;
+      height: 385px;
+      border-radius: 9px;
+      overflow: hidden;
+      position: relative;
+      .card-back {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 9.10473px;
+          object-fit: cover;
+        }
+      }
+
+      .verify-badge {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        z-index: 1;
+        p {
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 9.37076px;
+          line-height: 10px;
+          color: #ffffff;
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .artist-bagde {
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        padding: 33px;
+        img {
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+          border: 2px solid #fff;
+          margin-right: 9px;
+        }
+        h1 {
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16.5541px;
+          line-height: 18px;
+          color: #ffffff;
+          text-transform: capitalize;
+          margin-bottom: 0;
+        }
+        h2 {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12.4155px;
+          line-height: 14px;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+        span {
+          margin: 0 3px;
+        }
+      }
+
+      .collection-thumbnail {
+        padding: 0 18px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+          display: flex;
+          justify-content: center;
+          img {
+            border: 1.65541px solid #ffffff;
+            border-radius: 5.967px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .slick-arrow.slick-next {
+      top: -21%;
+      right: 1%;
+    }
+    .slick-arrow.slick-prev {
+      top: -21%;
+      left: 92%;
+    }
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  .multiArtproduct {
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 480px;
+        height: 385px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .multiArtproduct {
+    .slick-arrow.slick-next {
+      top: -20%;
+      right: 1%;
+    }
+    .slick-arrow.slick-prev {
+      top: -20%;
+      left: 91%;
+    }
+
+    .live-auction-cards {
+      .l-auction-card {
+        max-width: 300px;
+        padding: 21px;
+        background-color: #000;
+        border-radius: 10.2048px;
+      }
+    }
+
+    .multiArt-products {
+      .multiArtArtist-card {
+        max-width: 310px;
+        height: 300px;
+      }
+      .slick-arrow.slick-next {
+        top: -25%;
+        right: 1%;
+      }
+      .slick-arrow.slick-prev {
+        top: -25%;
+        left: 92%;
+      }
+    }
+
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 440px;
+        height: 385px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .multiArtproduct {
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 410px;
+        height: 330px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .slick-arrow.slick-next {
+        top: -24%;
+        right: 1%;
+      }
+      .slick-arrow.slick-prev {
+        top: -24%;
+        left: 90%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1600px) {
+  .multiArtproduct {
+    .multiArtproduct-heading {
+      width: 87%;
+      margin-bottom: 55px;
+      margin-top: 55px;
+      h2 {
+        font-size: 40px;
+      }
+      h6 {
+        font-size: 20px;
+      }
+    }
+    .slick-arrow.slick-next {
+      top: -18%;
+      right: 1%;
+    }
+    .slick-arrow.slick-prev {
+      top: -18%;
+      left: 89%;
+    }
+
+    .live-auction-cards {
+      .l-auction-card {
+        max-width: 370px;
+        padding: 21px;
+        background-color: #000;
+        border-radius: 10.2048px;
+      }
+    }
+
+    .multiArt-products {
+      .multiArtArtist-card {
+        max-width: 370px;
+        height: 330px;
+      }
+      .slick-arrow.slick-next {
+        top: -25%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -25%;
+        left: 88%;
+      }
+    }
+
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 390px;
+        height: 330px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .slick-arrow.slick-next {
+        top: -24%;
+        right: 1%;
+      }
+      .slick-arrow.slick-prev {
+        top: -24%;
+        left: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .multiArtproduct {
+    .multiArtproduct-banner {
+      padding-top: 180px;
+      padding-bottom: 180px;
+      margin-bottom: 80px;
+      h1 {
+        font-size: 80px;
+      }
+      .multiart-btns {
+        margin-left: 75px;
+        button {
+          font-size: 20px;
+          padding: 15px 0px;
+          border-radius: 3.64253px;
+          width: 160px;
+          margin-right: 75px;
+        }
+      }
+    }
+
+    .containers {
+      padding: 0 110px;
+    }
+
+    .multiArtproduct-heading {
+      width: 87%;
+      margin-bottom: 55px;
+      margin-top: 55px;
+      h2 {
+        font-size: 40px;
+      }
+      h6 {
+        font-size: 20px;
+      }
+    }
+    .slick-arrow.slick-next {
+      top: -18%;
+      right: 1.5%;
+    }
+    .slick-arrow.slick-prev {
+      top: -18%;
+      left: 89%;
+    }
+
+    .live-auction-cards {
+      .l-auction-card {
+        max-width: 340px;
+        padding: 21px;
+        background-color: #000;
+        border-radius: 10.2048px;
+      }
+    }
+
+    .multiArt-products {
+      .multiArtArtist-card {
+        max-width: 320px;
+        height: 310px;
+      }
+      .slick-arrow.slick-next {
+        top: -25%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -25%;
+        left: 88%;
+      }
+    }
+
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 350px;
+        height: 300px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .slick-arrow.slick-next {
+        top: -26%;
+        right: 1%;
+      }
+      .slick-arrow.slick-prev {
+        top: -26%;
+        left: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1310px) {
+  .multiArtproduct {
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 470px;
+        height: 360px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .slick-arrow.slick-next {
+        top: -22%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -22%;
+        left: 88%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .multiArtproduct {
+    .multiArtproduct-banner {
+      padding-top: 180px;
+      padding-bottom: 180px;
+      margin-bottom: 80px;
+      h1 {
+        font-size: 80px;
+      }
+      .multiart-btns {
+        margin-left: 75px;
+        button {
+          font-size: 20px;
+          padding: 15px 0px;
+          border-radius: 3.64253px;
+          width: 160px;
+          margin-right: 75px;
+        }
+      }
+    }
+
+    .containers {
+      padding: 0 100px;
+    }
+
+    .multiArtproduct-heading {
+      width: 80%;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      h2 {
+        font-size: 35px;
+      }
+      h6 {
+        font-size: 18px;
+      }
+    }
+    .slick-arrow.slick-next {
+      top: -15%;
+      right: 1.5%;
+    }
+    .slick-arrow.slick-prev {
+      top: -15%;
+      left: 83%;
+    }
+
+    .live-auction-cards {
+      .l-auction-card {
+        max-width: 370px;
+        padding: 21px;
+        background-color: #000;
+        border-radius: 10.2048px;
+      }
+    }
+
+    .multiArt-products {
+      .multiArtArtist-card {
+        max-width: 360px;
+        height: 330px;
+      }
+      .slick-arrow.slick-next {
+        top: -20%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -20%;
+        left: 83%;
+      }
+    }
+
+    .multiArt-collections {
+      .multiArt-collections-card {
+        width: 440px;
+        height: 360px;
+
+        .collection-thumbnail {
+          padding: 0 18px;
+
+          div {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            img {
+              border: 1.65541px solid #ffffff;
+              border-radius: 5.967px;
+              cursor: pointer;
+              max-width: 90%;
+            }
+          }
+        }
+      }
+      .slick-arrow.slick-next {
+        top: -19%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -19%;
+        left: 84%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .multiArtproduct {
+    .multiArtproduct-banner {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      margin-bottom: 80px;
+      h1 {
+        font-size: 40px;
+        line-height: 35px;
+      }
+      .multiart-btns {
+        margin-left: 10px;
+        button {
+          font-size: 16px;
+          padding: 8px 0px;
+          border-radius: 3.64253px;
+          width: 120px;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .containers {
+      padding: 0 20px;
+    }
+
+    .multiArtproduct-heading {
+      width: 80%;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        font-size: 20px;
+
+        line-height: 27px;
+      }
+      h6 {
+        font-size: 16px;
+        line-height: 27px;
+        margin-top: 10px;
+      }
+    }
+    .slick-arrow.slick-next {
+      top: -18%;
+      right: 1.5%;
+    }
+    .slick-arrow.slick-prev {
+      top: -18%;
+      left: 65%;
+    }
+
+    .live-auction-cards {
+      .slick-slide {
+        margin: auto;
+      }
+      margin: auto;
+      .l-auction-card {
+        max-width: 300px;
+        padding: 21px;
+        background-color: #000;
+        border-radius: 10.2048px;
+      }
+    }
+
+    .multiArt-products {
+      .multiArtArtist-card {
+        max-width: 360px;
+        height: 330px;
+      }
+      .slick-arrow.slick-next {
+        top: -25%;
+        right: 3%;
+      }
+      .slick-arrow.slick-prev {
+        top: -25%;
+        left: 65%;
+      }
+    }
+  }
+}

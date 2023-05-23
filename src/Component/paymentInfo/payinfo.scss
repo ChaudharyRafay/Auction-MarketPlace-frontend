@@ -1,0 +1,288 @@
+.payment-info {
+  padding: 65px;
+  background-color: #fff;
+  border-radius: 15px;
+
+  .go-back {
+    margin-bottom: 35px;
+    a {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+
+  .investor-sale-property-content {
+    display: flex;
+    margin-top: 60px;
+    justify-content: space-between;
+
+    .left-content {
+      width: 59%;
+
+      .publish-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 40px 22px;
+
+        p {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          color: #7a7a7a;
+          padding: 0px 0px 8px 8px;
+        }
+
+        input {
+          border: 1px solid #bdbdbd;
+          border-radius: 11px;
+          background-color: transparent;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          color: #969696;
+          padding: 9px 8px;
+          width: 90%;
+
+          &::placeholder {
+            font-weight: 500;
+            font-size: 15px;
+            color: #969696;
+          }
+          &:focus {
+            outline: #f7b03e;
+            border: 1px solid #f7b03e;
+          }
+          &::-webkit-inner-spin-button,
+          &::-webkit-outer-spin-button {
+            display: none;
+          }
+        }
+
+        .select-bond {
+          border: 1px solid #bdbdbd;
+          border-radius: 11px;
+          background-color: transparent;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 15px;
+          color: #969696;
+          padding: 8px 8px;
+          width: 90%;
+
+          &option {
+          }
+          &::placeholder {
+            font-weight: 500;
+            font-size: 15px;
+            color: #969696;
+          }
+
+          &:focus {
+            outline: #f7b03e;
+            border: 1px solid #f7b03e;
+          }
+        }
+
+        .phon {
+          display: flex;
+
+          input {
+            &:first-child {
+              width: 15%;
+              margin-right: 10px;
+              padding-right: 0px;
+              &::-webkit-inner-spin-button,
+              &::-webkit-outer-spin-button {
+                display: none;
+              }
+            }
+            &:last-child {
+              width: 73%;
+              &::-webkit-inner-spin-button,
+              &::-webkit-outer-spin-button {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-content {
+      width: 39%;
+      border-radius: 15px;
+      width: 35%;
+      // padding-top: 40px;
+      display: flex;
+      justify-content: center;
+      .right-pro {
+        border: 1px solid #c7c7c7;
+        border-radius: 15px;
+        width: fit-content;
+        padding: 30px;
+
+        .property-img {
+          h3 {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 20px;
+          }
+          margin-bottom: 34px;
+        }
+        .bonds-val {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 30px;
+          border-bottom: 0.5px solid #8e8e8e;
+          margin-bottom: 25px;
+          h1 {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: #000000;
+          }
+          span {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: #000000;
+          }
+          h2 {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #000000;
+          }
+        }
+        .total {
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #000000;
+          }
+
+          h4 {
+            font-family: "Manrope";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            color: #000000;
+
+            span {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .publish-btn {
+    button {
+      margin-top: 20px;
+      border: none;
+      background: #f7b03e;
+      border-radius: 12px;
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      color: #000000;
+      padding: 10px 120px;
+    }
+  }
+  .payment-method {
+    margin-top: 30px;
+    .sect-head h1 {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      color: #000000;
+    }
+
+    .select-payment-method {
+      display: flex;
+      .b1 {
+        margin-right: 15px;
+        margin-top: 10px;
+        label {
+          img {
+            padding: 20px 20px;
+            border: 0.5px solid #bebebe;
+            border-radius: 8px;
+            width: 120px;
+            height: 70px;
+          }
+          cursor: pointer;
+          width: fit-content;
+          [type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            &:checked + img {
+              border: 1px solid #f7b03e;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .payment-info {
+    padding: 65px 20px 65px 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .payment-info {
+    .investor-sale-property-content {
+      .left-content {
+        .publish-form {
+          input {
+            width: 100%;
+          }
+
+          .select-bond {
+            width: 100%;
+          }
+          .phon {
+            display: flex;
+
+            input {
+              &:first-child {
+                width: 18%;
+              }
+              &:last-child {
+                width: 82%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

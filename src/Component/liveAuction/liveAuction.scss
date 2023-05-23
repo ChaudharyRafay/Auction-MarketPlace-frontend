@@ -1,0 +1,392 @@
+.live-auction {
+  .multiArtproduct-banner {
+    background-color: rgb(3, 3, 3);
+    padding-top: 300px;
+    padding-bottom: 240px;
+    // background-image: url("../../..bidcollection/banner.png");
+    background-image: url("../../../bidcollection/banner.webp");
+    background-size: cover;
+    h1 {
+      font-family: "Trap800";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 93.4404px;
+      line-height: 103px;
+      color: #ffffff;
+      text-align: center;
+
+      span {
+        color: #68ffd8;
+      }
+    }
+    p {
+      font-family: "Trap400";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 34.7425px;
+      line-height: 38px;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  .backTab {
+    background-color: #000;
+    padding: 12px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    p {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: #ffffff;
+      margin-bottom: 0;
+    }
+  }
+  .Artproduct-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 32px;
+    h2 {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 46.4846px;
+      line-height: 51px;
+      text-transform: capitalize;
+      color: #000000;
+      margin-bottom: 0;
+    }
+  }
+  .containers {
+    padding: 140px 160px;
+  }
+
+  .live-auction-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 34px;
+    column-gap: 34px;
+    margin-bottom: 80px;
+    .l-auction-card {
+      max-width: 370px;
+      padding: 21px;
+      background-color: #000;
+      border-radius: 10.2048px;
+      .card-head {
+        display: flex;
+        position: relative;
+        img {
+          border-radius: 5.66931px;
+        }
+        .auction-timer {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translateX(-50%);
+          span {
+            background-color: red;
+          }
+          .day {
+            margin-right: 9px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+              font-family: "Trap700";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              color: #ffffff;
+              background: rgba(31, 31, 47, 0.91);
+              border-radius: 3px;
+              padding: 8px 10px 4px 10px;
+            }
+            p {
+              font-family: "Trap500";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 15px;
+              text-transform: uppercase;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .card-details {
+        margin-top: 20px;
+        h2 {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16.6994px;
+          line-height: 18px;
+          color: #ffffff;
+          margin-bottom: 0;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+        }
+        h3 {
+          font-family: "Trap400";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16.6994px;
+          line-height: 21px;
+          color: #848484;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+          span {
+            font-family: "Trap400";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16.6994px;
+            line-height: 18px;
+            color: #68ffd8;
+          }
+        }
+        button {
+          font-family: "Trap500";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13.9773px;
+          line-height: 15px;
+          color: #ffffff;
+          width: 100%;
+          padding: 12px 0;
+          background: #00a3ff;
+          border-radius: 1.86364px;
+          border: 1px solid #00a3ff;
+          transition: all 0.3s linear;
+          &:hover {
+            color: #00a3ff;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    // ---------------Trending Product
+    &.auction-ended {
+      .l-auction-card {
+        .card-head {
+          img {
+            border-radius: 5.66931px;
+            width: 100%;
+          }
+        }
+
+        .card-details {
+          button {
+            font-size: 18.9773px;
+            line-height: 21px;
+            color: #ffffff;
+            background: #919395;
+            border-radius: 1.86364px;
+            transition: all 0.3s linear;
+            border: 1px solid #919395;
+            cursor: unset;
+          }
+          .button1 {
+            font-family: "Trap500";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13.9773px;
+            line-height: 15px;
+            color: #ffffff;
+            cursor: pointer;
+            width: 100%;
+            padding: 12px 0;
+            background: #00a3ff;
+            border-radius: 1.86364px;
+            border: 1px solid #00a3ff;
+            transition: all 0.3s linear;
+            &:hover {
+              color: #00a3ff;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+  .winner-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 15px;
+    column-gap: 20px;
+
+    .auction-winner-card {
+      width: fit-content;
+      background: linear-gradient(90deg, #232526 0%, #414345 100%);
+      border: 2.79988px solid #000000;
+      border-radius: 9.33294px;
+      width: 380px;
+      padding: 15px 15px 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 70px;
+          border-radius: 100%;
+          border: 1.54079px solid #000000;
+          margin-right: 10px;
+        }
+        h2 {
+          font-family: "Trap600";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 23.3324px;
+          line-height: 26px;
+          color: #ffffff;
+          margin-bottom: 6.5;
+        }
+        h3 {
+          font-family: "Trap";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14.9327px;
+          line-height: 16px;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        h4 {
+          font-family: "Trap";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14.9327px;
+          line-height: 16px;
+          color: #ffffff;
+          margin-bottom: 0;
+          text-transform: capitalize;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .live-auction {
+    .winner-card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 30px;
+      column-gap: 15px;
+      .auction-winner-card {
+        width: fit-content;
+        background: linear-gradient(90deg, #232526 0%, #414345 100%);
+        border: 2.79988px solid #000000;
+        border-radius: 9.33294px;
+        width: 380px;
+        padding: 15px 15px 15px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          img {
+            width: 70px;
+            border-radius: 100%;
+            border: 1.54079px solid #000000;
+            margin-right: 10px;
+          }
+          h2 {
+            font-family: "Trap600";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 23.3324px;
+            line-height: 26px;
+            color: #ffffff;
+            margin-bottom: 6.5;
+          }
+          h3 {
+            font-family: "Trap";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14.9327px;
+            line-height: 16px;
+            color: #ffffff;
+            margin-bottom: 0;
+          }
+        }
+        .right {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          h4 {
+            font-family: "Trap";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14.9327px;
+            line-height: 16px;
+            color: #ffffff;
+            margin-bottom: 0;
+            text-transform: capitalize;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .live-auction {
+    .containers {
+      padding: 140px 100px;
+    }
+
+    .multiArtproduct-banner {
+      padding-top: 180px;
+      padding-bottom: 180px;
+      h1 {
+        font-size: 80px;
+      }
+      p {
+        font-size: 32px;
+      }
+    }
+
+    .live-auction-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

@@ -1,0 +1,282 @@
+.navbar-sec {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 9999;
+  background-color: #000000;
+}
+
+.navbar-sec .navbar {
+  padding: 32px 82px;
+}
+
+.navbar-sec .navbar-nav {
+  padding-left: 140px !important;
+}
+
+.navbar ul li a {
+  padding-right: 0rem;
+  padding-left: 0rem;
+  font-family: "Trap700";
+  font-size: 15px;
+  line-height: 17px;
+  padding-top: 20px;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding-bottom: 0;
+}
+.navbar ul li a.active {
+  padding-right: 0rem;
+  padding-left: 0rem;
+  font-family: "Trap600";
+  font-size: 15px;
+  line-height: 17px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  /* background-color: red; */
+}
+.navbar-nav .page-name {
+  padding-left: 60px;
+}
+
+.navbar-expand-lg .navbar-nav {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav .search-bar {
+  margin-left: 135px;
+  width: 260px;
+  height: 35px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+
+  background-color: transparent;
+
+  font-family: "Trap500";
+  font-size: 15px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.navbar-nav .search-bar::placeholder {
+  font-family: "Trap500";
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.navbar-nav .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.navbar-sec .connect-wallet {
+  margin-right: 55px !important;
+  padding: 8px 12px;
+  outline: none;
+  border: none;
+  background: #ffffff;
+  border-radius: 3px;
+
+  font-family: "Trap600";
+  font-size: 15px;
+  line-height: 17px;
+
+  color: #000000;
+}
+
+.navbar-sec .login {
+  margin-right: 55px !important;
+  padding: 8px 12px;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-radius: 3px;
+
+  font-family: "Trap600";
+  font-size: 15px;
+  line-height: 17px;
+
+  color: #ffffff;
+}
+
+.form-control:focus {
+  color: white !important;
+  background-color: transparent !important;
+  border-color: white !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* =============1720============== */
+
+@media screen and (max-width: 1720px) {
+  .navbar-sec .navbar {
+    padding: 10px 70px;
+  }
+
+  .navbar-sec .navbar-nav {
+    padding-left: 60px !important;
+  }
+  .navbar-nav .page-name {
+    padding-left: 30px;
+  }
+}
+
+/* =============1580============== */
+
+@media screen and (max-width: 1580px) {
+  .navbar-nav .search-bar {
+    margin-left: 50px;
+  }
+  .navbar-sec .connect-wallet {
+    margin-right: 20px !important;
+  }
+  .navbar-sec .login {
+    margin-right: 12px !important;
+  }
+}
+
+/* =============1580============== */
+
+@media screen and (max-width: 1580px) {
+  .navbar-nav .search-bar {
+    margin-left: 50px;
+  }
+  .navbar-sec .connect-wallet {
+    margin-right: 20px !important;
+  }
+  .navbar-sec .login {
+    margin-right: 12px !important;
+  }
+}
+
+/* =============1500============== */
+
+@media screen and (max-width: 1500px) {
+  .navbar-sec .navbar {
+    padding: 10px 50px;
+  }
+  .navbar-nav .page-name {
+    padding-left: 20px;
+  }
+}
+
+/* =============1420============== */
+
+@media screen and (max-width: 1420px) {
+  .navbar-sec .navbar {
+    padding: 10px 30px;
+  }
+}
+
+/* =============1380============== */
+
+@media screen and (max-width: 1380px) {
+  .navbar-sec .navbar {
+    padding: 10px 20px;
+  }
+  .navbar-sec .navbar-nav {
+    padding-left: 45px !important;
+  }
+  .navbar-nav .page-name {
+    padding-left: 15px;
+  }
+  .navbar-sec .connect-wallet {
+    margin-right: 10px !important;
+    font-size: 14px;
+  }
+  .navbar-sec .login {
+    margin-right: 7px !important;
+    padding: 8px 5px;
+    font-size: 14px;
+  }
+}
+
+/* =============1280============== */
+
+@media screen and (max-width: 1280px) {
+  .navbar-sec .navbar-nav {
+    padding-left: 30px !important;
+  }
+  .navbar-nav .page-name {
+    padding-left: 10px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    line-height: 17px;
+    padding-top: 15px;
+  }
+  .navbar-nav .search-bar {
+    margin-left: 30px;
+  }
+}
+
+/* =============1210============== */
+
+@media screen and (max-width: 1210px) {
+  .navbar-nav .search-bar {
+    margin-left: 15px;
+  }
+  .navbar-sec .navbar-nav {
+    padding-left: 15px !important;
+  }
+  .navbar-sec .connect-wallet {
+    margin-right: 5px !important;
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+
+  .navbar-sec .login {
+    margin-right: 5px !important;
+    padding: 8px 5px;
+    font-size: 12px;
+  }
+}
+
+/* =============1024============== */
+
+@media screen and (max-width: 1140px) {
+  .navbar-sec .navbar {
+    padding: 10px 5px;
+  }
+  .navbar-sec .navbar-nav {
+    padding-left: 5px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-nav .nav-link {
+    font-size: 13px;
+    line-height: 17px;
+    padding-top: 15px;
+  }
+  .navbar-nav .search-bar {
+    margin-left: 7px;
+    font-size: 13px;
+  }
+  .navbar-sec .login {
+    margin-right: 2px !important;
+    padding: 8px 3px;
+    font-size: 12px;
+  }
+  .navbar-sec .connect-wallet {
+    margin-right: 4px !important;
+    padding: 8px 2px;
+    font-size: 12px;
+  }
+}
+
+.navbar-toggler {
+  background-color: beige;
+}
+
+@media screen and (max-width: 600px) {
+  .log-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
