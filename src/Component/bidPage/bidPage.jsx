@@ -136,6 +136,7 @@ const BidPage = () => {
     navigate("/liveAuction");
   };
   const placeBid = async () => {
+    console.log(price, productId, userInfo?._id);
     if (price) {
       try {
         const result = await axios.post(`${BASEURL}/api/product/placeBid`, {
@@ -334,6 +335,10 @@ const BidPage = () => {
                             </div>
                           </div>
                         </div>
+                        <div className="d-flex mt-1 auction-end">
+                          <p>Actual Price : </p>
+                          <p style={{ fontWeight: "bold" }}>{product?.price}</p>
+                        </div>
                         {product?.userId == userInfo?._id ? null : (
                           <div className="your-bid">
                             <h1>your bid</h1>
@@ -371,6 +376,7 @@ const BidPage = () => {
                     <div className="left">
                       <img
                         src={`${BASEURL}/${item?.userId?.image}`}
+                        style={{ width: "42px", height: "42px" }}
                         alt=""
                         className="img-fluid"
                       />

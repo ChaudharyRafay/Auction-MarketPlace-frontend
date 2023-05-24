@@ -6,8 +6,10 @@ import { BASEURL } from "../../../BASEURL";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
 const CreateProduct = () => {
   const { userInfo } = useSelector((state) => state.user);
+  console.log(userInfo);
   const navigate = useNavigate();
   const [data, setdata] = useState({
     itemName: "",
@@ -41,6 +43,7 @@ const CreateProduct = () => {
         navigate("/");
       }
     } catch (error) {
+      toast.error("Product not created!!");
       console.log(error.stack);
     }
   };

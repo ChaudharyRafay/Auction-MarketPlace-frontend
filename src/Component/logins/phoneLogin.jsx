@@ -10,8 +10,10 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setUserInfo } from "../../reducers/authreducer";
+import { toast } from "react-toastify";
 const PhoneLogin = () => {
   const [key, setKey] = useState("mail");
+  const [isloading, setisloading] = useState(false);
   const [showMailPopup, setshowMailPopup] = useState(false);
   const [error, seterror] = useState(null);
   const [email, setemail] = useState("");
@@ -28,6 +30,8 @@ const PhoneLogin = () => {
   const handleLogin = async () => {
     if (email || (phone && password)) {
       try {
+        // setisloading(true);
+
         const result = await axios.post(`${BASEURL}/api/user/loginUser`, {
           phone: countryCode + phone,
           email,
@@ -37,9 +41,11 @@ const PhoneLogin = () => {
           const userData = result.data.user;
           localStorage.setItem("userData", JSON.stringify(userData));
           dispatch(setUserInfo(userData));
+          setisloading(false);
           navigate("/");
         }
       } catch (error) {
+        // setisloading(false);
         console.log(error);
         if (error.response.status == 401) {
           return seterror("*Invalid Credentials");
@@ -128,6 +134,10 @@ const PhoneLogin = () => {
               activeKey={key}
               onSelect={(k) => {
                 setKey(k);
+                seterror(null);
+                setemail("");
+                setpassword("");
+                setphone("");
               }}
               className="mb-3"
             >
@@ -144,6 +154,8 @@ const PhoneLogin = () => {
                   <input
                     type="email"
                     name=""
+                    autoComplete="off"
+                    value={email}
                     id=""
                     placeholder="Email"
                     onChange={(e) => {
@@ -175,7 +187,12 @@ const PhoneLogin = () => {
                   )}
 
                   <div>
-                    <button className="conti" onClick={handleLogin}>
+                    <button
+                      className="conti"
+                      onClick={handleLogin}
+                      // disabled={isloading}
+                      // style={{ backgroundColor: `${isloading && "#afafaf"}` }}
+                    >
                       LOGIN
                     </button>
                   </div>
@@ -215,6 +232,8 @@ const PhoneLogin = () => {
                       type="number"
                       name=""
                       id=""
+                      value={countryCode}
+                      autoComplete="off"
                       placeholder="92"
                       className="codePhone"
                       onChange={(e) => {
@@ -225,6 +244,8 @@ const PhoneLogin = () => {
                       type="number"
                       name=""
                       id=""
+                      value={phone}
+                      autoComplete="off"
                       placeholder="000 0000 000"
                       className="phone-numb"
                       onChange={(e) => {
@@ -272,6 +293,9 @@ const PhoneLogin = () => {
                           Privacy Policy
                         </a>
                       </h6>
+                    </span>
+                    <span>
+                      <Link to="/register">Register</Link>
                     </span>
                   </div>
                 </div>

@@ -15,10 +15,10 @@ function AllBids() {
     return timeAgo;
   };
   const getWinnerProducts = async () => {
-    const { id } = JSON.parse(localStorage.getItem("userData"));
+    const { _id } = JSON.parse(localStorage.getItem("userData"));
     const result = await axios.post(
       `${BASEURL}/api/product/getBidWinnerProducts`,
-      { userId: id }
+      { userId: _id }
     );
     console.log(result);
     if (result.status == 200) {

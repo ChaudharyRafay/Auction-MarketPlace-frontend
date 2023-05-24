@@ -17,6 +17,7 @@ import PhoneEmail from "./PhoneEmail";
 import Setting from "./Setting";
 import AllBids from "./AllBids";
 import Activities from "./Activities";
+import { setUserInfo } from "../../../reducers/authreducer";
 const EditProfile = () => {
   const formData = new FormData();
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ const EditProfile = () => {
         );
         if (result.status == 200) {
           const Data = result.data.updatedProfile;
-          dispatch(profileData(Data));
+          dispatch(setUserInfo(Data));
           toast.success("Cover image updated successfully!!");
           setfileUrl(null);
         }
@@ -84,8 +85,9 @@ const EditProfile = () => {
           `${BASEURL}/api/user/updateProfileImage`,
           formData
         );
+        console.log(result);
         const Data = result.data.updatedProfile;
-        dispatch(profileData(Data));
+        dispatch(setUserInfo(Data));
         toast.success("Profile image updated successfully!!");
       }
     } catch (error) {
@@ -96,7 +98,23 @@ const EditProfile = () => {
   useEffect(() => {
     updateProfileImage();
   }, [profileUrl]);
-
+  const getUserData = async () => {
+    try {
+      let userData = JSON.parse(localStorage.getItem("userData"));
+      if (userData) {
+        const result = await axios.post(`${BASEURL}/api/user/profile`, {
+          userId: userData._id,
+        });
+        console.log(result);
+        if (result.status == 200) {
+          dispatch(setUserInfo(result.data.Profile));
+        }
+      }
+    } catch (error) {}
+  };
+  useEffect(() => {
+    getUserData();
+  }, []);
   return (
     <div>
       <section className="edit-profile">

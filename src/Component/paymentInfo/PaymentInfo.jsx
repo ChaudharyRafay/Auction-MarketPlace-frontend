@@ -21,7 +21,7 @@ const PaymentInfo = () => {
     cardNumber: "",
     paymentMethod: "",
     productId: productId,
-    userId: userData.id,
+    userId: userData._id,
   });
   console.log(formData);
   const [errors, setErrors] = useState({});
@@ -88,7 +88,7 @@ const PaymentInfo = () => {
         const response = await axios.post(
           `${BASEURL}/api/payment/authenticateUser`,
           {
-            userId: userData.id,
+            userId: userData._id,
             productId,
           }
         );

@@ -128,37 +128,6 @@ const MultiProduct = () => {
     ],
   };
 
-  const liveAuctionCard = [
-    {
-      name: "The Hammer",
-      productID: 16,
-      price: 33000,
-    },
-
-    {
-      name: "Iron Man",
-      productID: 36,
-      price: 2303,
-    },
-
-    {
-      name: "Cat",
-      productID: 22,
-      price: 203,
-    },
-
-    {
-      name: "Bull Dog",
-      productID: 26,
-      price: 0.31,
-    },
-
-    {
-      name: "The Armsman",
-      productID: 262,
-      price: 0.223,
-    },
-  ];
   const navigate = useNavigate();
   const calculateTimeLeft = (product) => {
     const difference = new Date(product?.endDate) - new Date();

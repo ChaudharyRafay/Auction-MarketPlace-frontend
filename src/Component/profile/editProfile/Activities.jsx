@@ -11,14 +11,14 @@ function Activities() {
   const getActivities = async () => {
     try {
       const result = await axios.post(`${BASEURL}/api/product/reviewProducts`, {
-        userId: userInfo._id,
+        userId: userInfo?._id,
       });
       console.log(result);
       if (result.status == 200) {
         setreviewProducts(result.data.reviewProduct);
       }
     } catch (error) {
-      toast.error("Server error.Refresh the page...");
+      toast.error("Server error.Refresh the page...sssssss");
     }
   };
   useEffect(() => {

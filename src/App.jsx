@@ -32,7 +32,7 @@ function App() {
       let userData = JSON.parse(localStorage.getItem("userData"));
       if (userData) {
         const result = await axios.post(`${BASEURL}/api/user/profile`, {
-          userId: userData.id,
+          userId: userData._id,
         });
         console.log(result);
         if (result.status == 200) {

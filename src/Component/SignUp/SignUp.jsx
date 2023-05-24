@@ -18,9 +18,12 @@ const SignUp = () => {
   const [showPhonePopup, setshowPhonePopup] = useState(false);
   const [error, seterror] = useState(null);
   const [email, setemail] = useState("");
+  console.log(email);
   const [username, setusername] = useState("");
+  console.log(username);
   const [countryCode, setcountryCode] = useState(null);
   const [phone, setphone] = useState("");
+  console.log(phone);
   const [verifyCode, setverifyCode] = useState(null);
   const [code, setCode] = useState(["", "", "", "", "", ""]);
   const [userId, setuserId] = useState();
@@ -163,6 +166,8 @@ const SignUp = () => {
                 setpassword("");
                 setusername("");
                 setKey(k);
+                setphone("");
+                setemail("");
                 seterror(null);
               }}
               className="mb-3"
@@ -181,6 +186,7 @@ const SignUp = () => {
                     type="text"
                     name=""
                     id=""
+                    value={username}
                     placeholder="Username"
                     onChange={(e) => {
                       setusername(e.target.value);
@@ -191,6 +197,7 @@ const SignUp = () => {
                     type="email"
                     name=""
                     id=""
+                    value={email}
                     placeholder="Email"
                     onChange={(e) => {
                       setemail(e.target.value);
@@ -240,6 +247,7 @@ const SignUp = () => {
                         </a>
                       </h6>
                     </span>
+
                     <span>
                       <Link to="/logins">Login</Link>
                     </span>
@@ -260,6 +268,7 @@ const SignUp = () => {
                   <input
                     type="text"
                     name=""
+                    value={username}
                     id=""
                     placeholder="Username"
                     onChange={(e) => {
