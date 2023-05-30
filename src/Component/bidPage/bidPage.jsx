@@ -12,6 +12,7 @@ import moment from "moment";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 import Review from "./Review";
+import ChatBox from "../Chat/chat/chatBox";
 
 const BidPage = () => {
   const { userInfo } = useSelector((state) => state.user);
@@ -22,7 +23,11 @@ const BidPage = () => {
   const [winner, setwinner] = useState(null);
   const [auction, setauction] = useState(null);
   const [price, setprice] = useState(null);
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
+  const openChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };
   const calculateTimeLeft = () => {
     const difference = new Date(product?.endDate) - new Date();
     let timeLeft = {};
@@ -215,6 +220,11 @@ const BidPage = () => {
   return (
     <div>
       <section className="bid-page">
+        {isChatOpen ? (
+          <ChatBox setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} />
+        ) : (
+          <></>
+        )}
         <div className="bid-page-content container ">
           <div className="bid-top">
             <div className=" left-bid">
@@ -358,6 +368,9 @@ const BidPage = () => {
                     )}
                   </>
                 )}
+                <button className="mt-4 chat-button" onClick={openChat}>
+                  Chat
+                </button>
               </div>
             </div>
           </div>

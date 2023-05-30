@@ -11,6 +11,7 @@ import PaymentInfo from "./Component/paymentInfo/PaymentInfo";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AdminMessage from "./Component/message/AdminMessage";
+import Chat from "./Component/Chat/chat/chatBox";
 import Footer from "./Component/home/Footer/Footer";
 import EditProfile from "./Component/profile/editProfile/EditProfile";
 import CreateProduct from "./Component/createProduct/CreateProduct";
@@ -67,7 +68,8 @@ function App() {
                 path="/payment-info/:productId"
                 element={<PaymentInfo />}
               />
-              <Route path="/message" element={<AdminMessage />} />
+              {/* <Route path="/message" element={<AdminMessage />} /> */}
+              <Route path="/message" element={<Chat />} />
               <Route path="/profile" element={<EditProfile />} />
               <Route path="/create-product" element={<CreateProduct />} />
               <Route path="/user-profile" element={<UserLooking />} />

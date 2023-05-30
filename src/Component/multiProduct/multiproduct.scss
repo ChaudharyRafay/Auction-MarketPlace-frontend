@@ -48,6 +48,71 @@
       }
     }
   }
+
+
+
+
+
+
+
+
+
+  .your-bid {
+    h1 {
+      font-family: "Trap500";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 29px;
+      text-align: justify;
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      text-transform: capitalize;
+    }
+    button {
+      font-family: "Trap600";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: justify;
+      color: #ffffff;
+      background-color: #000;
+      border: 1px solid #000;
+      padding: 10px 40px;
+    }
+    input {
+      font-family: "Trap700";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: justify;
+      color: #161515;
+      border: 1px solid #000;
+      padding: 10px 40px 10px 10px;
+      &:focus-visible {
+        border-radius: 0;
+        outline: unset;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .containers {
     padding: 0 160px;
   }
@@ -191,6 +256,7 @@
     // ---------------Trending products
     &.trending-products {
       .l-auction-card {
+   
         background-color: transparent;
         padding: 0;
 

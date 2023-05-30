@@ -1,0 +1,19 @@
+place following line anywhere in bidpage
+
+ {isChatOpen ? <ChatBox /> : <></>}
+
+------------------------------------------------------
+
+button to open chat
+
+  <button className="mt-4" onClick={openChat}>Chat</button>
+-----------------------------------------------------------
+
+To Toggle state
+----------------------------------------------------------
+
+ const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const openChat = () => {
+    setIsChatOpen(!isChatOpen);
+  };

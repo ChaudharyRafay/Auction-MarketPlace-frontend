@@ -171,12 +171,40 @@ const MultiProduct = () => {
 
     return () => clearTimeout(timer);
   });
+  const [searchInput, setSearchInput] = useState("");
+  const [searchfilterInput, setSearchfilterInput] = useState("");
+  const filteredProducts = searchInput
+    ? products.filter((product) =>
+        product.itemName.toLowerCase().includes(searchInput.toLowerCase())
+      )
+    : products;
+
+  const filteredTrendingProducts = searchfilterInput
+    ? trendingProduct.filter((product) =>
+        product.itemName.toLowerCase().includes(searchfilterInput.toLowerCase())
+      )
+    : trendingProduct;
   return (
     <div>
       <section className="multiArtproduct">
         <div className="multiArtproduct-banner">
           <h1> Auction Market.</h1>
         </div>
+
+        <div className="row g-3 align-items-center justify-content-end">
+          <div className="col-auto me-5">
+            <div className="d-flex your-bid">
+              <input
+                type="text"
+                placeholder="Search here..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+              />
+              <button>Search</button>
+            </div>
+          </div>
+        </div>
+
         <div className="containers">
           {/* ----------------------- Live Auction */}
           <div className="explore-live-auction">
@@ -188,107 +216,135 @@ const MultiProduct = () => {
             </div>
             <div className="live-auction-cards">
               <Slider {...settings}>
-                {products?.map((item, index) => {
-                  const timeLeft = calculateTimeLeft(item);
-                  return (
-                    <div className="l-auction-card" key={index}>
-                      <div className="card-head">
-                        <img
-                          src={`${BASEURL}/${item.image}`}
-                          alt=""
-                          className="img-fluid"
-                        />
+                {filteredProducts.length ? (
+                  filteredProducts?.map((item, index) => {
+                    const timeLeft = calculateTimeLeft(item);
+                    return (
+                      <div className="l-auction-card " key={index}>
+                        <div className="card-head">
+                          <img
+                            src={`${BASEURL}/${item.image}`}
+                            alt=""
+                            className="img-fluid"
+                          />
 
-                        <div className="auction-timer">
-                          {timeLeft.days > 0 && (
+                          <div className="auction-timer">
+                            {timeLeft.days > 0 && (
+                              <div className="day">
+                                <h1>{formatTime(timeLeft.days)}</h1>
+                                <p>d's</p>
+                              </div>
+                            )}
                             <div className="day">
-                              <h1>{formatTime(timeLeft.days)}</h1>
-                              <p>d's</p>
+                              <h1>{formatTime(timeLeft.hours)}</h1>
+                              <p>h's</p>
                             </div>
-                          )}
-                          <div className="day">
-                            <h1>{formatTime(timeLeft.hours)}</h1>
-                            <p>h's</p>
-                          </div>
 
-                          <div className="day">
-                            <h1>{formatTime(timeLeft.minutes)}</h1>
-                            <p>mn's</p>
-                          </div>
+                            <div className="day">
+                              <h1>{formatTime(timeLeft.minutes)}</h1>
+                              <p>mn's</p>
+                            </div>
 
-                          <div className="day">
-                            <h1>{formatTime(timeLeft.seconds)}</h1>
-                            <p>sec</p>
+                            <div className="day">
+                              <h1>{formatTime(timeLeft.seconds)}</h1>
+                              <p>sec</p>
+                            </div>
                           </div>
                         </div>
+                        <div className="card-details">
+                          <h2>
+                            {item.itemName}
+                            <span>#{index + 1}</span>
+                          </h2>
+                          <h3>
+                            {item.price}
+                            <span>
+                              {item.price + " "}
+                              PKR
+                            </span>
+                          </h3>
+                          <button
+                            onClick={() => {
+                              navigate(`/bidPage/${item._id}`);
+                            }}
+                          >
+                            Place Bid
+                          </button>
+                        </div>
                       </div>
-                      <div className="card-details">
-                        <h2>
-                          {item.itemName}
-                          <span>#{index + 1}</span>
-                        </h2>
-                        <h3>
-                          {item.price}
-                          <span>
-                            {item.price + " "}
-                            PKR
-                          </span>
-                        </h3>
-                        <button
-                          onClick={() => {
-                            navigate(`/bidPage/${item._id}`);
-                          }}
-                        >
-                          Place Bid
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                ) : (
+                  <>
+                    <img src="\profile\empty.png" alt="" />
+                  </>
+                )}
               </Slider>
             </div>
           </div>
-
+          <hr className="mt-5" />
           {/* ----------------------- Trending products*/}
           <div className="explore-live-auction">
+            <div className="row mt-5 g-3 align-items-center justify-content-end">
+              <div className="col-auto ">
+                <div className="d-flex your-bid">
+                  <input
+                    type="text"
+                    placeholder="Search here..."
+                    value={searchfilterInput}
+                    onChange={(e) => setSearchfilterInput(e.target.value)}
+                  />
+                  <button>Search</button>
+                </div>
+              </div>
+            </div>
             <div className="multiArtproduct-heading">
               <h2>Trending Auction</h2>
               <h6 onClick={liveAuctionPage} style={{ cursor: "pointer" }}>
                 View All
               </h6>
             </div>
+
             <div className="live-auction-cards trending-products">
               <Slider {...settings}>
-                {trendingProduct?.map((item, index) => {
-                  return (
-                    <div className="l-auction-card" key={index}>
-                      <div className="card-head">
-                        <img
-                          src={`${BASEURL}/${item.image}`}
-                          alt=""
-                          className="img-fluid"
-                        />
+                {filteredTrendingProducts ? (
+                  filteredTrendingProducts?.map((item, index) => {
+                    return (
+                      <div>
+                        <div className="l-auction-card" key={index}>
+                          <div className="card-head">
+                            <img
+                              src={`${BASEURL}/${item.image}`}
+                              alt=""
+                              className="img-fluid"
+                            />
+                          </div>
+                          <div className="card-details">
+                            <h2>
+                              {item.itemName}
+                              <span>#{index + 1}</span>
+                            </h2>
+                            <h3>
+                              Price
+                              <span>PKR {item.price}</span>
+                            </h3>
+                            <button
+                              onClick={() => {
+                                navigate(`/bidPage/${item._id}`);
+                              }}
+                            >
+                              Place Bid
+                            </button>
+                          </div>
+                        </div>
                       </div>
-                      <div className="card-details">
-                        <h2>
-                          {item.itemName}
-                          <span>#{index + 1}</span>
-                        </h2>
-                        <h3>
-                          Price
-                          <span>PKR {item.price}</span>
-                        </h3>
-                        <button
-                          onClick={() => {
-                            navigate(`/bidPage/${item._id}`);
-                          }}
-                        >
-                          Place Bid
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                ) : (
+                  <>
+                    <img src="\profile\empty.png" alt="" />
+                  </>
+                )}
               </Slider>
             </div>
           </div>
