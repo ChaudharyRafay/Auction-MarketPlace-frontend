@@ -3,6 +3,8 @@ import "./navbar.css";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { BASEURL } from "../../../BASEURL";
+import { DropdownButton } from "react-bootstrap";
+import { MenuItem } from "@mui/material";
 
 const Navbar = () => {
   const { userInfo } = useSelector((state) => state.user);
@@ -42,20 +44,6 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                {/* <li class="nav-item">
-                  <Link
-                    class="nav-link pb-3"
-                    aria-current="page"
-                    to="/payment-info"
-                  >
-                    Payment
-                  </Link>
-                </li> */}
-                {/* <li class="nav-item">
-                  <Link class="nav-link pb-3" aria-current="page" to="/message">
-                    Message
-                  </Link>
-                </li> */}
                 <li class="nav-item">
                   <Link
                     class="nav-link pb-3"
@@ -63,6 +51,11 @@ const Navbar = () => {
                     to="/create-product"
                   >
                     Add New Product
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link class="nav-link pb-3" aria-current="page" to="/message">
+                    Messages
                   </Link>
                 </li>
               </ul>

@@ -68,8 +68,8 @@ function App() {
                 path="/payment-info/:productId"
                 element={<PaymentInfo />}
               />
-              {/* <Route path="/message" element={<AdminMessage />} /> */}
-              <Route path="/message" element={<Chat />} />
+              <Route path="/message" element={<AdminMessage />} />
+              {/* <Route path="/message" element={<Chat />} /> */}
               <Route path="/profile" element={<EditProfile />} />
               <Route path="/create-product" element={<CreateProduct />} />
               <Route path="/user-profile" element={<UserLooking />} />

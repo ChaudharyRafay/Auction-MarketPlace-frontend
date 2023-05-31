@@ -1,7 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./chat.css";
 import { Icon } from "@iconify/react";
-const ChatBox = ({ setIsChatOpen, isChatOpen }) => {
+import { io } from "socket.io-client";
+import { BASEURL } from "../../../../BASEURL";
+import { useSelector } from "react-redux";
+import axios from "axios";
+import { toast } from "react-toastify";
+import moment from "moment";
+const ChatBox = ({ setIsChatOpen, isChatOpen, recieverId }) => {
+  const { userInfo } = useSelector((state) => state.user);
+  const [msg, setMsg] = useState("");
+  const [conversation, setconversation] = useState(null);
+
+  const socket = useRef();
+  const handleSendMsg = (e) => {
+    e.preventDefault();
+    if (msg.trim().length) {
+      socket.current.emit("sendMsg", {
+        senderId: userInfo._id,
+        receiverId: recieverId,
+        text: msg,
+      });
+      setMsg("");
+    }
+  };
+  const handleClose = () => {
+    socket.current.disconnect();
+    setIsChatOpen(false);
+  };
+  useEffect(() => {
+    socket.current = io(BASEURL);
+    if (userInfo._id) {
+      let userId = userInfo._id;
+      socket.current.emit("addUser", userId);
+    }
+    socket.current.on("getMessage", (data) => {
+      setconversation(data.newMessages);
+    });
+  }, [userInfo]);
+  const getMessages = async () => {
+    try {
+      const result = await axios.post(`${BASEURL}/api/message/getMessage`, {
+        userId: userInfo._id,
+        recieverId,
+      });
+      if (result.status == 200) {
+        setconversation(result.data.messages);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getMessages();
+  }, [userInfo]);
+  const chatMessagesRef = useRef(null);
+  useEffect(() => {
+    const chatMessagesContainer = chatMessagesRef.current;
+
+    if (chatMessagesContainer) {
+      chatMessagesContainer.scrollTop = chatMessagesContainer.scrollHeight;
+    }
+  }, [conversation]);
+
   return (
     <div>
       <div className=" bid-chart" style={{ width: "300px" }}>
@@ -23,9 +84,7 @@ const ChatBox = ({ setIsChatOpen, isChatOpen }) => {
                 type="button"
                 class="btn btn-box-tool"
                 data-widget="collapse"
-                onClick={() => {
-                  setIsChatOpen(false);
-                }}
+                onClick={handleClose}
               >
                 <Icon
                   icon="iconamoon:close-bold"
@@ -39,50 +98,69 @@ const ChatBox = ({ setIsChatOpen, isChatOpen }) => {
           {/* <!-- /.box-header --> */}
           <div class="box-body">
             {/* <!-- Conversatio/ns are loaded here --> */}
-            <div class="direct-chat-messages">
-              {/* <!-- Message. Default to the left --> */}
-              <div class="direct-chat-msg">
-                <div class="direct-chat-info clearfix">
-                  <span class="direct-chat-name pull-left">
-                    Alexander Pierce
-                  </span>
-                  <span class="direct-chat-timestamp pull-right">
-                    23 Jan 2:00 pm
-                  </span>
-                </div>
-                {/* <!-- /.direct-chat-info --> */}
-                <img
-                  class="direct-chat-img"
-                  src="https://bootdey.com/img/Content/user_1.jpg"
-                  alt="Message User Image"
-                />
-                {/* <!-- /.direct-chat-img --> */}
-                <div class="direct-chat-text">
-                  Is this template really for free? That's unbelievable!
-                </div>
-                {/* <!-- /.direct-chat-text --> */}
-              </div>
-              {/* <!-- /.direct-chat-msg --> */}
-
-              {/* <!-- Message to the right --> */}
-              <div class="direct-chat-msg right">
-                <div class="direct-chat-info clearfix">
-                  <span class="direct-chat-name pull-right">Sarah Bullock</span>
-                  <span class="direct-chat-timestamp pull-left">
-                    23 Jan 2:05 pm
-                  </span>
-                </div>
-                {/* <!-- /.direct-chat-info --> */}
-                <img
-                  class="direct-chat-img"
-                  src="https://bootdey.com/img/Content/user_2.jpg"
-                  alt="Message User Image"
-                />
-                {/* <!-- /.direct-chat-img --> */}
-                <div class="direct-chat-text">You better believe it!</div>
-                {/* <!-- /.direct-chat-text --> */}
-              </div>
-              {/* <!-- /.direct-chat-msg --> */}
+            <div class="direct-chat-messages" ref={chatMessagesRef}>
+              {conversation?.messages?.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.sender._id == recieverId ? (
+                      <div class="direct-chat-msg">
+                        {/* Message. Default to the left  */}
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-left">
+                            {item.sender.username}
+                          </span>
+                          <span class="direct-chat-timestamp pull-right ms-2">
+                            {moment(item.timestamp).format("DD MMM h:mm a")}
+                            {/* {item.timestamp} */}
+                          </span>
+                        </div>
+                        {/* <!-- /.direct-chat-info --> */}
+                        <img
+                          class="direct-chat-img"
+                          src={`${BASEURL}/${item.sender.image}`}
+                          alt="Message User Image"
+                        />
+                        {/* <!-- /.direct-chat-img --> */}
+                        <div
+                          class="direct-chat-text"
+                          style={{ wordWrap: "break-word" }}
+                        >
+                          {item.text}
+                        </div>
+                        {/* <!-- /.direct-chat-text --> */}
+                        {/* <!-- /.direct-chat-msg --> */}
+                      </div>
+                    ) : (
+                      <div class="direct-chat-msg right">
+                        {/* <!-- Message to the right --> */}
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-right">
+                            {item.sender.username}
+                          </span>
+                          <span class="direct-chat-timestamp pull-left ms-2">
+                            {moment(item.timestamp).format("DD MMM h:mm a")}
+                          </span>
+                        </div>
+                        {/* <!-- /.direct-chat-info --> */}
+                        <img
+                          class="direct-chat-img"
+                          src={`${BASEURL}/${item.sender.image}`}
+                          alt="Message User Image"
+                        />
+                        {/* <!-- /.direct-chat-img --> */}
+                        <div
+                          class="direct-chat-text"
+                          style={{ wordWrap: "break-word" }}
+                        >
+                          {item.text}
+                        </div>
+                        {/* <!-- /.direct-chat-text --> */}
+                        {/* <!-- /.direct-chat-msg --> */}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
             {/* <!--/.direct-chat-messages--> */}
 
@@ -124,11 +202,19 @@ const ChatBox = ({ setIsChatOpen, isChatOpen }) => {
                   rows={1}
                   type="text"
                   name="message"
+                  value={msg}
+                  onChange={(e) => {
+                    setMsg(e.target.value);
+                  }}
                   placeholder="Type Message ..."
                   className="form-controls"
                 />
                 <span class="input-group-btn">
-                  <button type="submit" class="btn btn-primary btn-flat">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-flat"
+                    onClick={handleSendMsg}
+                  >
                     Send
                   </button>
                 </span>

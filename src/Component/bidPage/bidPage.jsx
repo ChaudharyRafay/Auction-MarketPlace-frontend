@@ -220,8 +220,12 @@ const BidPage = () => {
   return (
     <div>
       <section className="bid-page">
-        {isChatOpen ? (
-          <ChatBox setIsChatOpen={setIsChatOpen} isChatOpen={isChatOpen} />
+        {isChatOpen && product?.userId !== userInfo?._id ? (
+          <ChatBox
+            setIsChatOpen={setIsChatOpen}
+            isChatOpen={isChatOpen}
+            recieverId={product.userId}
+          />
         ) : (
           <></>
         )}
@@ -368,9 +372,11 @@ const BidPage = () => {
                     )}
                   </>
                 )}
-                <button className="mt-4 chat-button" onClick={openChat}>
-                  Chat
-                </button>
+                {product?.userId !== userInfo?._id && (
+                  <button className="mt-4 chat-button" onClick={openChat}>
+                    Chat
+                  </button>
+                )}
               </div>
             </div>
           </div>
