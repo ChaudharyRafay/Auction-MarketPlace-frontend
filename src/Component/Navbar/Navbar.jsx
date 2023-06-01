@@ -15,7 +15,16 @@ const Navbar = () => {
     }
     navigate("/logins");
   };
+  const scrollToContact = (id) => {
+    const contactSection = document.getElementById(id);
 
+    if (contactSection) {
+      window.scrollTo({
+        top: contactSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <>
       <div className="navbar-sec">
@@ -59,6 +68,26 @@ const Navbar = () => {
                 <li class="nav-item">
                   <Link class="nav-link pb-3" aria-current="page" to="/message">
                     Messages
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link pb-3"
+                    aria-current="page"
+                    to="/"
+                    onClick={() => scrollToContact("contact-section")}
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link pb-3"
+                    aria-current="page"
+                    to="/"
+                    onClick={() => scrollToContact("FAQ-section")}
+                  >
+                    FAQ
                   </Link>
                 </li>
               </ul>

@@ -12,7 +12,7 @@ const Faq = () => {
 
   return (
     <>
-      <section className="faq">
+      <section className="faq" id="FAQ-section">
         <div className="section-heading">
           <h2>FAQ</h2>
           <p>Maybe your question is have been answered, check this out</p>
@@ -29,7 +29,7 @@ const Faq = () => {
                       alt=""
                       className="diamond"
                     />
-                    Can your provide us with a brief introduction to MultiArt ?
+                    Can you provide a brief introduction to Auction Market?
                   </div>
                   {/* <img
                     src={setopen ? closeAccordian : openAccordian}
@@ -38,10 +38,10 @@ const Faq = () => {
                   /> */}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Exercitationem debitis eligendi illo deleniti esse odit
-                  voluptas! Et sit sunt, deserunt quos commodi quia beatae
-                  iusto! Dolores corrupti excepturi soluta sunt?
+                  An auction market is a platform where goods or services are
+                  sold to the highest bidder. It involves participants placing
+                  bids, and the highest bid at the end of the auction wins the
+                  item.
                 </Accordion.Body>
               </Accordion.Item>
 
@@ -54,7 +54,7 @@ const Faq = () => {
                       alt=""
                       className="diamond"
                     />
-                    What is the Mutliart like briefly ?
+                    How can I participate in an auction?
                   </div>
                   {/* <img
                     src={setopen ? closeAccordian : openAccordian}
@@ -63,11 +63,10 @@ const Faq = () => {
                   /> */}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  voluptates reprehenderit cupiditate ducimus atque ut,
-                  dignissimos possimus dicta officia nisi totam natus
-                  blanditiis, ratione beatae ea in laborum, exercitationem
-                  corrupti.
+                  To participate in an auction, you need to create an account on
+                  our website. Once registered, you can browse the available
+                  auctions, place bids on items you're interested in, and
+                  monitor the progress of the auction.
                 </Accordion.Body>
               </Accordion.Item>
 
@@ -80,7 +79,7 @@ const Faq = () => {
                       alt=""
                       className="diamond"
                     />
-                    Where can i learn more about the Multiart ?
+                    How does bidding work?
                   </div>
                   {/* <img
                     src={setopen ? closeAccordian : openAccordian}
@@ -89,10 +88,12 @@ const Faq = () => {
                   /> */}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Eveniet officiis distinctio est maxime id aut exercitationem
-                  obcaecati dignissimos suscipit. Molestiae totam impedit
-                  dolores architecto, praesentium sed eos animi magni. Facilis?
+                  Bidding typically involves placing an initial bid on an item.
+                  Other participants can then place higher bids until the
+                  auction ends. If your bid is the highest when the auction
+                  closes, you win the item. Some auctions may have specific
+                  bidding rules, such as minimum bid increments or reserve
+                  prices.
                 </Accordion.Body>
               </Accordion.Item>
 
@@ -105,8 +106,7 @@ const Faq = () => {
                       alt=""
                       className="diamond"
                     />
-                    What are the different ways Artist can earn while they
-                    Upload ?
+                    How do I know if I won an auction?
                   </div>
                   {/* <img
                     src={setopen ? closeAccordian : openAccordian}
@@ -115,10 +115,10 @@ const Faq = () => {
                   /> */}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                  eveniet exercitationem voluptatum repellendus incidunt
-                  voluptates tenetur corrupti vel consequatur? Nam ipsa corrupti
-                  est aliquid, laborum at dolorem sed quaerat porro.
+                  If you have the highest bid when the auction ends and it meets
+                  or surpasses the reserve price (if applicable), you will be
+                  notified as the winner. You will receive instructions on how
+                  to proceed with payment and item collection.
                 </Accordion.Body>
               </Accordion.Item>
 
@@ -130,8 +130,7 @@ const Faq = () => {
                       alt=""
                       className="diamond"
                     />
-                    If I’m an influencer/content creator/partner, who should i
-                    contact?
+                    How long do auctions typically last?
                   </div>
                   {/* <img
                     src={setopen ? closeAccordian : openAccordian}
@@ -140,10 +139,9 @@ const Faq = () => {
                   /> */}
                 </Accordion.Header>
                 <Accordion.Body>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium debitis labore sunt perspiciatis nulla expedita
-                  explicabo adipisci ipsam fuga. Provident voluptatibus ipsa
-                  accusantium sed totam modi, laboriosam deleniti quod quae.
+                  The duration of auctions can vary. Some may last for a few
+                  hours, while others can run for several days. The specific
+                  duration for each auction will be indicated on the listing.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
