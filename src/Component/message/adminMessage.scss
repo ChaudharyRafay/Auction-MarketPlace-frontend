@@ -2,9 +2,9 @@
   overflow: hidden;
   .admin-message-content {
     background-color: #fff;
-    border-radius: 30px;
+    // border-radius: 30px;
     padding: 40px 30px 50px 40px;
-    margin-bottom: 200px;
+    // margin-bottom: 200px;
     .left {
       h1 {
         font-family: "Arvo";
@@ -130,7 +130,7 @@
         overflow-y: auto;
         .unread-message {
           background: #f6fafb;
-          border-radius: 8px;
+          // border-radius: 8px;
           padding: 24px 33px 19px 17px;
           border-left: 8px solid #87a6c0;
           display: flex;

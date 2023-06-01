@@ -24,24 +24,58 @@ const BidPage = () => {
   const [auction, setauction] = useState(null);
   const [price, setprice] = useState(null);
   const [isChatOpen, setIsChatOpen] = useState(false);
-
+  const [auctionStarted, setAuctionStarted] = useState(false);
   const openChat = () => {
     setIsChatOpen(!isChatOpen);
   };
+  // const calculateTimeLeft = () => {
+  //   const difference = new Date(product?.endDate) - new Date();
+  //   let timeLeft = {};
+
+  //   if (difference > 0) {
+  //     timeLeft = {
+  //       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+  //       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+  //       minutes: Math.floor((difference / 1000 / 60) % 60),
+  //       seconds: Math.floor((difference / 1000) % 60),
+  //     };
+  //   }
+  //   return timeLeft;
+  // };
   const calculateTimeLeft = () => {
-    const difference = new Date(product?.endDate) - new Date();
+    const currentDate = new Date();
+    const startDate = new Date(product?.startDate);
+    const endDate = new Date(product?.endDate);
+
     let timeLeft = {};
 
-    if (difference > 0) {
+    if (currentDate < startDate) {
+      const difference = startDate - currentDate;
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
         seconds: Math.floor((difference / 1000) % 60),
       };
+      if (auctionStarted !== false) {
+        setAuctionStarted(false);
+      }
+    } else if (currentDate < endDate) {
+      const difference = endDate - currentDate;
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+      if (auctionStarted !== true) {
+        setAuctionStarted(true);
+      }
     }
+
     return timeLeft;
   };
+
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
   const formatTime = (time) => {
     return time < 10 ? `0${time}` : time;
@@ -329,7 +363,12 @@ const BidPage = () => {
                           )}
                         </div>
                         <div className="auction-end">
-                          <p>Auction ends in</p>
+                          <p>
+                            {" "}
+                            {auctionStarted
+                              ? "Auction ends in"
+                              : "Auction starts in"}
+                          </p>
                           <div className="timer">
                             <div className="days">
                               <h4>{timeLeft.days}</h4>
@@ -353,7 +392,7 @@ const BidPage = () => {
                           <p>Actual Price : </p>
                           <p style={{ fontWeight: "bold" }}>{product?.price}</p>
                         </div>
-                        {product?.userId == userInfo?._id ? null : (
+                        {product?.userId !== userInfo?._id && auctionStarted ? (
                           <div className="your-bid">
                             <h1>your bid</h1>
                             <div>
@@ -367,7 +406,7 @@ const BidPage = () => {
                               <button onClick={placeBid}>Place a Bid</button>
                             </div>
                           </div>
-                        )}
+                        ) : null}
                       </>
                     )}
                   </>
@@ -462,88 +501,12 @@ const BidPage = () => {
                   </div>
                 </>
               ) : null}
-
-              {/* <div className="bid-detail-content">
-                <div className="w-50">
-                  <h4>Manufacure </h4>
-                </div>
-                <div className="w-50">
-                  <p>xyz</p>
-                </div>
-              </div> */}
             </div>
           </div>
-          {/* {console.log("121")} */}
 
           <Review product={product} />
         </div>
       </section>
-      {/* <div className="multiArtproduct">
-        <div className="containers">
-          <div className="explore-live-auction">
-            <div className="multiArtproduct-heading">
-              <h2>Live Auctions</h2>
-              <h6 onClick={liveAuctionPage} style={{ cursor: "pointer" }}>
-                View All
-              </h6>
-            </div>
-
-            <div className="live-auction-cards">
-              <Slider {...settings}>
-                {liveAuctionCard.map((item) => {
-                  return (
-                    <div className="l-auction-card">
-                      <div className="card-head">
-                        <img
-                          src="\productcollection\productCard.png"
-                          alt=""
-                          className="img-fluid"
-                        />
-
-                        <div className="auction-timer">
-                          <div className="day">
-                            <h1>06</h1>
-                            <p>d's</p>
-                          </div>
-
-                          <div className="day">
-                            <h1>16</h1>
-                            <p>h's</p>
-                          </div>
-
-                          <div className="day">
-                            <h1>36</h1>
-                            <p>mn's</p>
-                          </div>
-
-                          <div className="day">
-                            <h1>56</h1>
-                            <p>sec</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="card-details">
-                        <h2>
-                          {item.name}
-                          <span>#{item.productID}</span>
-                        </h2>
-                        <h3>
-                          Price
-                          <span>
-                            {item.price + " "}
-                            USD
-                          </span>
-                        </h3>
-                        <button onClick={bidPageRoute}>Place Bid</button>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

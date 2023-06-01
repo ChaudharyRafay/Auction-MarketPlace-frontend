@@ -26,8 +26,7 @@ const CreateProduct = () => {
 
   const formData = new FormData();
   const handleSubmit = async () => {
-    // Validate the form fields
-    console.log("-----");
+    // Validate the form fields;
     const formIsValid = validateForm();
     if (!formIsValid) {
       return;
@@ -101,7 +100,46 @@ const CreateProduct = () => {
     return isValid;
   };
   const [selectedImage, setSelectedImage] = useState(null);
-  console.log(selectedImage);
+  const handleStartDateChange = (e) => {
+    const selectedDate = moment(e.target.value, "YYYY-MM-DD");
+    const currentDate = moment().startOf("day");
+
+    if (selectedDate.isSameOrBefore(currentDate)) {
+      setErrors((prevState) => ({
+        ...prevState,
+        startDate: "*Please select a date today or in the future.",
+      }));
+    } else {
+      setErrors((prevState) => ({ ...prevState, startDate: "" }));
+      setdata((prevState) => ({
+        ...prevState,
+        startDate: selectedDate.format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
+      }));
+    }
+  };
+
+  const handleEndDateChange = (e) => {
+    const selectedDate = moment(e.target.value, "YYYY-MM-DD");
+    const currentDate = moment().startOf("day");
+
+    if (selectedDate.isSameOrBefore(currentDate)) {
+      setErrors((prevState) => ({
+        ...prevState,
+        endDate: "*Please select a date today or in the future.",
+      }));
+    } else if (selectedDate.isBefore(data.startDate)) {
+      setErrors((prevState) => ({
+        ...prevState,
+        endDate: "*End date must be after the start date.",
+      }));
+    } else {
+      setErrors((prevState) => ({ ...prevState, endDate: "" }));
+      setdata((prevState) => ({
+        ...prevState,
+        endDate: selectedDate.format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
+      }));
+    }
+  };
   return (
     <div>
       <section className="create-product ">
@@ -312,15 +350,16 @@ const CreateProduct = () => {
                       type="date"
                       required
                       placeholder="Fixed Price"
-                      onChange={(e) => {
-                        setdata((prevState) => ({
-                          ...prevState,
-                          startDate: moment
-                            .utc(e.target.value)
-                            .format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
-                        }));
-                        e.target.value !== 0 ? (errors.startDate = "") : null;
-                      }}
+                      onChange={handleStartDateChange}
+                      // onChange={(e) => {
+                      //   setdata((prevState) => ({
+                      //     ...prevState,
+                      //     startDate: moment
+                      //       .utc(e.target.value)
+                      //       .format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
+                      //   }));
+                      //   e.target.value !== 0 ? (errors.startDate = "") : null;
+                      // }}
                     />
                     {errors.startDate && (
                       <span className="error text-danger">
@@ -334,15 +373,17 @@ const CreateProduct = () => {
                       type="date"
                       required
                       placeholder="Fixed Price"
-                      onChange={(e) => {
-                        setdata((prevState) => ({
-                          ...prevState,
-                          endDate: moment
-                            .utc(e.target.value)
-                            .format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
-                        }));
-                        e.target.value !== 0 ? (errors.endDate = "") : null;
-                      }}
+                      // onChange={(e) => {
+                      //   setdata((prevState) => ({
+                      //     ...prevState,
+                      //     endDate: moment
+                      //       .utc(e.target.value)
+                      //       .format("YYYY-MM-DDTHH:mm:ss.SSSZ"),
+                      //   }));
+                      //   e.target.value !== 0 ? (errors.endDate = "") : null;
+                      // }}
+
+                      onChange={handleEndDateChange}
                     />
                     {errors.endDate && (
                       <span className="error text-danger">

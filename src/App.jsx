@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  BrowserRouter as Router,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import BidPage from "./Component/bidPage/bidPage";
 import PhoneLogin from "./Component/logins/phoneLogin";
@@ -25,7 +30,16 @@ import { useDispatch } from "react-redux";
 import { setUserInfo } from "./reducers/authreducer";
 import { BASEURL } from "../BASEURL";
 import axios from "axios";
+// import ScrollToTop from "./Component/ScrollToTop";
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 function App() {
   const dispatch = useDispatch();
   const getUserData = async () => {
@@ -51,6 +65,7 @@ function App() {
       <ToastContainer style={{ marginTop: "80px" }} />
       <Router>
         {/* <Navbar /> */}
+        <ScrollToTop />
         <Routes>
           <Route element={<WithoutNav />}>
             <Route path="/logins" element={<PhoneLogin />} />
