@@ -10,9 +10,9 @@ const Navbar = () => {
   const { userInfo } = useSelector((state) => state.user);
   const navigate = useNavigate();
   const navLogin = () => {
-    if (userInfo) {
-      return;
-    }
+    // if (userInfo) {
+    //   return;
+    // }
     navigate("/logins");
   };
   const scrollToContact = (id) => {

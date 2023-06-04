@@ -104,7 +104,7 @@ const CreateProduct = () => {
     const selectedDate = moment(e.target.value, "YYYY-MM-DD");
     const currentDate = moment().startOf("day");
 
-    if (selectedDate.isSameOrBefore(currentDate)) {
+    if (selectedDate.isBefore(currentDate)) {
       setErrors((prevState) => ({
         ...prevState,
         startDate: "*Please select a date today or in the future.",
