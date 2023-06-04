@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { BASEURL } from "../../../../BASEURL";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Products() {
   const [userProducts, setuserProducts] = useState([]);
@@ -15,6 +16,19 @@ function Products() {
       if (result.status == 200) {
         setuserProducts(result.data.userProduct);
       }
+    }
+  };
+  const handleDelete = async (productId) => {
+    try {
+      const result = await axios.post(`${BASEURL}/api/product/deleteProduct`, {
+        productId: productId,
+      });
+      if (result.status == 200) {
+        toast.success("Product deleted successfully...");
+        getUserProduct();
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
   useEffect(() => {
@@ -44,11 +58,38 @@ function Products() {
                     <h1>{item.itemName}</h1>
                     <p style={{ marginTop: "15px" }}>{item.description}</p>
                     <div>
-                      <h2>item {index + 1}</h2>
-                      <Link to={`/bidPage/${item._id}`}>View</Link>
+                      {/* <h2>item {index + 1}</h2> */}
+                      <div>
+                        <p
+                          className="bg-danger"
+                          style={{
+                            fontSize: "13px",
+                            cursor: "pointer",
+                            color: "white",
+                          }}
+                          onClick={() => handleDelete(item?._id)}
+                        >
+                          Delete
+                        </p>
+                      </div>
+                      <div>
+                        <div>
+                          <p
+                            className=""
+                            style={{
+                              fontSize: "13px",
+                              cursor: "pointer",
+                            }}
+                          >
+                            {handleActive(item)}
+                          </p>
+                        </div>
+                        {/* <Link to={`/bidPage/${item._id}`}>View</Link> */}
+                      </div>
                     </div>
-                    <div className="dlt">
-                      <p style={{ fontSize: "13px" }}>{handleActive(item)}</p>
+                    <div className="dlt mt-2">
+                      <Link to={`/bidPage/${item._id}`}>View</Link>
+                      {/* <p style={{ fontSize: "13px" }}>{handleActive(item)}</p> */}
                     </div>
                   </div>
                 </div>
