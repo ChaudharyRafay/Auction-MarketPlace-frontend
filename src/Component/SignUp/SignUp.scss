@@ -359,7 +359,11 @@
       }
     }
   }
-  
+  .codeError{
+    p{
+      color: red;
+    }
+  }
   .mail-login-modal {
     p {
       font-family: "Trap400";

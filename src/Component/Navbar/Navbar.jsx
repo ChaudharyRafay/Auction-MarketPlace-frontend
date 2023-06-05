@@ -98,7 +98,7 @@ const Navbar = () => {
                 </button>
                 <Link to="profile">
                   <img
-                    src={`${BASEURL}/${userInfo?.image}`}
+                    src={userInfo ? `${BASEURL}/${userInfo?.image}` : null}
                     class="rounded-circle"
                     height="42"
                     width="42"

@@ -267,7 +267,7 @@ const BidPage = () => {
           <div className="bid-top">
             <div className=" left-bid">
               <img
-                src={`${BASEURL}/${product?.image}`}
+                src={product ? `${BASEURL}/${product?.image}` : null}
                 alt=""
                 className="img-fluid"
               />
@@ -433,7 +433,11 @@ const BidPage = () => {
                   <div className="last-bid-place" key={index}>
                     <div className="left">
                       <img
-                        src={`${BASEURL}/${item?.userId?.image}`}
+                        src={
+                          item?.userId?.image
+                            ? `${BASEURL}/${item?.userId?.image}`
+                            : null
+                        }
                         style={{ width: "42px", height: "42px" }}
                         alt=""
                         className="img-fluid"

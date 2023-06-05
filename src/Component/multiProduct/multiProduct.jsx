@@ -223,7 +223,7 @@ const MultiProduct = () => {
                       <div className="l-auction-card " key={index}>
                         <div className="card-head">
                           <img
-                            src={`${BASEURL}/${item.image}`}
+                            src={item ? `${BASEURL}/${item.image}` : null}
                             alt=""
                             className="img-fluid"
                           />
@@ -314,7 +314,7 @@ const MultiProduct = () => {
                         <div className="l-auction-card" key={index}>
                           <div className="card-head">
                             <img
-                              src={`${BASEURL}/${item.image}`}
+                              src={item ? `${BASEURL}/${item.image}` : null}
                               alt=""
                               className="img-fluid"
                             />

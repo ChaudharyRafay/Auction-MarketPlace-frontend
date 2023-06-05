@@ -283,7 +283,7 @@ const PaymentInfo = () => {
                 <div className="property-img">
                   <h3>Your Product</h3>
                   <img
-                    src={`${BASEURL}/${product?.image}`}
+                    src={product ? `${BASEURL}/${product?.image}` : null}
                     alt=""
                     className="img-fluid"
                   />

@@ -18,14 +18,12 @@ const SignUp = () => {
   const [showPhonePopup, setshowPhonePopup] = useState(false);
   const [error, seterror] = useState(null);
   const [email, setemail] = useState("");
-  console.log(email);
   const [username, setusername] = useState("");
-  console.log(username);
   const [countryCode, setcountryCode] = useState(null);
   const [phone, setphone] = useState("");
-  console.log(phone);
   const [verifyCode, setverifyCode] = useState(null);
   const [code, setCode] = useState(["", "", "", "", "", ""]);
+  const [CodeEror, setCodeError] = useState("");
   const [userId, setuserId] = useState();
   const [password, setpassword] = useState("");
   const handleClose = () => setshowMailPopup(false);
@@ -91,22 +89,43 @@ const SignUp = () => {
     newCode[index] = e.target.value;
     setCode(newCode);
   };
+  // const handleVerifyCode = async () => {
+  //   const enteredCode = code.join("");
+  //   if (enteredCode.length === 6 && enteredCode === verifyCode) {
+  //     console.log(userId);
+  //     const result = await axios.post(`${BASEURL}/api/user/verifyAccount`, {
+  //       userId,
+  //     });
+  //     if (result.status == 200) {
+  //       const userData = result.data.user;
+  //       localStorage.setItem("userData", JSON.stringify(userData));
+  //       dispatch(setUserInfo(userData));
+  //       navigate("/");
+  //     }
+  //     // call your function here
+  //   } else {
+  //     console.log("not match");
+  //   }
+  // };
   const handleVerifyCode = async () => {
     const enteredCode = code.join("");
-    if (enteredCode.length === 6 && enteredCode === verifyCode) {
-      console.log(userId);
-      const result = await axios.post(`${BASEURL}/api/user/verifyAccount`, {
-        userId,
-      });
-      if (result.status == 200) {
-        const userData = result.data.user;
-        localStorage.setItem("userData", JSON.stringify(userData));
-        dispatch(setUserInfo(userData));
-        navigate("/");
+    if (enteredCode.length === 6) {
+      if (enteredCode === verifyCode) {
+        console.log(userId);
+        const result = await axios.post(`${BASEURL}/api/user/verifyAccount`, {
+          userId,
+        });
+        if (result.status === 200) {
+          const userData = result.data.user;
+          localStorage.setItem("userData", JSON.stringify(userData));
+          dispatch(setUserInfo(userData));
+          navigate("/");
+        }
+        // call your function here
+      } else {
+        setCodeError("Invalid verification code. Please try again."); // Set error message
+        console.log("not match");
       }
-      // call your function here
-    } else {
-      console.log("not match");
     }
   };
   useEffect(() => {
@@ -439,6 +458,9 @@ const SignUp = () => {
                 />
               </span>
             </div>
+
+            {CodeEror && <h5 style={{ color: "red" }}>{CodeEror} </h5>}
+
             <h5>
               Your code will arrive in a few seconds.
               <br />

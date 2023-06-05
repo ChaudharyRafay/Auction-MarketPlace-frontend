@@ -117,7 +117,11 @@ const ChatBox = ({ setIsChatOpen, isChatOpen, recieverId }) => {
                         {/* <!-- /.direct-chat-info --> */}
                         <img
                           class="direct-chat-img"
-                          src={`${BASEURL}/${item.sender.image}`}
+                          src={
+                            item?.sender?.image
+                              ? `${BASEURL}/${item.sender.image}`
+                              : null
+                          }
                           alt="Message User Image"
                         />
                         {/* <!-- /.direct-chat-img --> */}
@@ -144,7 +148,11 @@ const ChatBox = ({ setIsChatOpen, isChatOpen, recieverId }) => {
                         {/* <!-- /.direct-chat-info --> */}
                         <img
                           class="direct-chat-img"
-                          src={`${BASEURL}/${item.sender.image}`}
+                          src={
+                            item?.sender?.image
+                              ? `${BASEURL}/${item.sender.image}`
+                              : null
+                          }
                           alt="Message User Image"
                         />
                         {/* <!-- /.direct-chat-img --> */}

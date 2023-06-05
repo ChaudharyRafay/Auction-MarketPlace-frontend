@@ -52,7 +52,10 @@ function Products() {
               return (
                 <div className="my-item-card" key={index}>
                   <div className="left">
-                    <img src={`${BASEURL}/${item.image}`} alt="" />
+                    <img
+                      src={item ? `${BASEURL}/${item.image}` : null}
+                      alt=""
+                    />
                   </div>
                   <div className="right">
                     <h1>{item.itemName}</h1>

@@ -122,7 +122,10 @@ const EditProfile = () => {
           {fileUrl ? (
             <img src={fileUrl} alt="" />
           ) : userInfo?.coverPhoto ? (
-            <img src={`${BASEURL}/${userInfo?.coverPhoto}`} alt="" />
+            <img
+              src={userInfo ? `${BASEURL}/${userInfo?.coverPhoto}` : null}
+              alt=""
+            />
           ) : (
             <>
               <h1>upload image</h1>
@@ -162,7 +165,7 @@ const EditProfile = () => {
               ) : userInfo?.image ? (
                 <>
                   <img
-                    src={`${BASEURL}/${userInfo?.image}`}
+                    src={userInfo ? `${BASEURL}/${userInfo?.image}` : null}
                     alt=""
                     className="profile-dp"
                     style={{ zIndex: 2 }}

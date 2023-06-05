@@ -47,7 +47,10 @@ function AllBids() {
                     <h6>item</h6>
                     <div>
                       <Link to={`/bidPage/${item._id}`} className="">
-                        <img src={`${BASEURL}/${item?.image}`} alt="" />
+                        <img
+                          src={item ? `${BASEURL}/${item?.image}` : null}
+                          alt=""
+                        />
                       </Link>
                       <p>{item.itemName}</p>
                     </div>
@@ -104,7 +107,10 @@ function AllBids() {
                     <h6>item</h6>
                     <div>
                       <Link to={`/bidPage/${item._id}`} className="">
-                        <img src={`${BASEURL}/${item?.image}`} alt="" />
+                        <img
+                          src={item ? `${BASEURL}/${item?.image}` : null}
+                          alt=""
+                        />
                       </Link>
                       <p>{item.itemName}</p>
                     </div>
